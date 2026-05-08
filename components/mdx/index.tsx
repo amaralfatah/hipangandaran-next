@@ -1,29 +1,37 @@
 import type { MDXComponents } from 'mdx/types'
 import type { ComponentPropsWithoutRef } from 'react'
 import { InfoBox } from '@/components/ui/InfoBox'
-import { cn } from '@/lib/utils'
+import { cn, reactChildrenToString, slugify } from '@/lib/utils'
 
-function Heading2({ className, ...rest }: ComponentPropsWithoutRef<'h2'>) {
+function Heading2({ className, children, id, ...rest }: ComponentPropsWithoutRef<'h2'>) {
+  const headingId = id ?? slugify(reactChildrenToString(children))
   return (
     <h2
+      id={headingId}
       className={cn(
         'mt-12 scroll-mt-24 font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-charcoal md:text-3xl',
         className,
       )}
       {...rest}
-    />
+    >
+      {children}
+    </h2>
   )
 }
 
-function Heading3({ className, ...rest }: ComponentPropsWithoutRef<'h3'>) {
+function Heading3({ className, children, id, ...rest }: ComponentPropsWithoutRef<'h3'>) {
+  const headingId = id ?? slugify(reactChildrenToString(children))
   return (
     <h3
+      id={headingId}
       className={cn(
         'mt-8 scroll-mt-24 font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight text-charcoal md:text-2xl',
         className,
       )}
       {...rest}
-    />
+    >
+      {children}
+    </h3>
   )
 }
 
