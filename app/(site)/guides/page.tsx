@@ -34,20 +34,20 @@ export default async function GuidesIndexPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
       <header>
-        <p className="font-[family-name:var(--font-mono)] text-xs tracking-widest text-ocean uppercase">
+        <p className="text-ocean font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
           Guides
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight text-charcoal md:text-5xl">
+        <h1 className="text-charcoal mt-3 font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight md:text-5xl">
           All guides
         </h1>
-        <p className="mt-4 max-w-2xl text-charcoal/75 md:text-lg">
+        <p className="text-charcoal/75 mt-4 max-w-2xl md:text-lg">
           Field-verified articles on getting to Pangandaran, where to surf, where to stay, and how
           to spend a week without burning your budget.
         </p>
       </header>
 
       {articles.length === 0 ? (
-        <p className="mt-12 text-charcoal/70">No guides published yet — check back soon.</p>
+        <p className="text-charcoal/70 mt-12">No guides published yet — check back soon.</p>
       ) : (
         <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {articles.map(({ slug, frontmatter }) => (
@@ -63,7 +63,7 @@ export default async function GuidesIndexPage() {
                   <CardContent>{frontmatter.description}</CardContent>
                   <CardFooter>
                     <span>By {frontmatter.author}</span>
-                    <span className="font-[family-name:var(--font-mono)] text-xs text-charcoal/60">
+                    <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
                       {frontmatter.readingTime} min · {frontmatter.publishedAt}
                     </span>
                   </CardFooter>

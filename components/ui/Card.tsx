@@ -13,7 +13,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(function Card(
     <Component
       ref={ref}
       className={cn(
-        'rounded-2xl border border-charcoal/10 bg-cream p-5 shadow-[0_1px_2px_rgba(28,28,30,0.04)] transition-shadow hover:shadow-[0_4px_16px_rgba(28,28,30,0.06)]',
+        'border-charcoal/10 bg-cream rounded-2xl border p-5 shadow-[0_1px_2px_rgba(28,28,30,0.04)] transition-shadow hover:shadow-[0_4px_16px_rgba(28,28,30,0.06)]',
         className,
       )}
       {...rest}
@@ -29,7 +29,7 @@ export function CardTitle({ className, ...rest }: HTMLAttributes<HTMLHeadingElem
   return (
     <h3
       className={cn(
-        'font-[family-name:var(--font-display)] text-xl leading-tight font-semibold text-charcoal',
+        'text-charcoal font-[family-name:var(--font-display)] text-xl leading-tight font-semibold',
         className,
       )}
       {...rest}
@@ -38,17 +38,17 @@ export function CardTitle({ className, ...rest }: HTMLAttributes<HTMLHeadingElem
 }
 
 export function CardDescription({ className, ...rest }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn('text-sm text-charcoal/70', className)} {...rest} />
+  return <p className={cn('text-charcoal/70 text-sm', className)} {...rest} />
 }
 
 export function CardContent({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('text-sm text-charcoal/85', className)} {...rest} />
+  return <div className={cn('text-charcoal/85 text-sm', className)} {...rest} />
 }
 
 export function CardFooter({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn('mt-4 flex items-center justify-between text-sm text-charcoal/70', className)}
+      className={cn('text-charcoal/70 mt-4 flex items-center justify-between text-sm', className)}
       {...rest}
     />
   )

@@ -56,7 +56,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body className="flex min-h-full flex-col bg-cream text-charcoal">
+      <body className="bg-cream text-charcoal flex min-h-full flex-col">
         <OrganizationJsonLd />
         {children}
       </body>

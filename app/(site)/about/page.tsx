@@ -18,23 +18,18 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 md:px-6 md:py-16">
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'About' },
-        ]}
-      />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
 
       <header className="mt-6">
-        <p className="font-[family-name:var(--font-mono)] text-xs tracking-widest text-ocean uppercase">
+        <p className="text-ocean font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
           About
         </p>
-        <h1 className="mt-3 font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight text-charcoal md:text-5xl">
+        <h1 className="text-charcoal mt-3 font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight md:text-5xl">
           Hi, I&rsquo;m Amar
         </h1>
       </header>
 
-      <figure className="mt-8 overflow-hidden rounded-3xl border border-charcoal/10">
+      <figure className="border-charcoal/10 mt-8 overflow-hidden rounded-3xl border">
         {/* TODO(content): replace with real photo of Amar in Pangandaran. */}
         <Image
           src="/images/guides/placeholder.jpg"
@@ -45,11 +40,11 @@ export default function AboutPage() {
         />
       </figure>
 
-      <div className="prose-base mt-10 space-y-5 leading-relaxed text-charcoal/85">
+      <div className="prose-base text-charcoal/85 mt-10 space-y-5 leading-relaxed">
         <p>
           [PLACEHOLDER: 1 paragraf — siapa Anda, sudah berapa lama di Pangandaran, kenapa di sini.
-          Tulis dengan voice &ldquo;honest local friend&rdquo; — second person, casual, satu detail spesifik
-          yang tidak generik.]
+          Tulis dengan voice &ldquo;honest local friend&rdquo; — second person, casual, satu detail
+          spesifik yang tidak generik.]
         </p>
         <p>
           [PLACEHOLDER: 1 paragraf — apa yang Anda kerjakan sehari-hari. Surf? Remote work? Ngajar?
@@ -61,7 +56,7 @@ export default function AboutPage() {
           generik? Capek lihat turis ditipu di Green Canyon? Tulis honest.]
         </p>
 
-        <h2 className="font-[family-name:var(--font-display)] mt-10 text-2xl font-semibold text-charcoal md:text-3xl">
+        <h2 className="text-charcoal mt-10 font-[family-name:var(--font-display)] text-2xl font-semibold md:text-3xl">
           Why this site exists
         </h2>
         <p>
@@ -71,12 +66,15 @@ export default function AboutPage() {
           actually lives within walking distance of the lineup.
         </p>
 
-        <h2 id="contact" className="font-[family-name:var(--font-display)] mt-10 text-2xl font-semibold text-charcoal md:text-3xl">
+        <h2
+          id="contact"
+          className="text-charcoal mt-10 font-[family-name:var(--font-display)] text-2xl font-semibold md:text-3xl"
+        >
           Get in touch
         </h2>
         <p>
-          Spotted a price that&rsquo;s out of date? Want to report a closed warung or a broken
-          link? Email{' '}
+          Spotted a price that&rsquo;s out of date? Want to report a closed warung or a broken link?
+          Email{' '}
           <a
             href="mailto:hello@hipangandaran.com"
             className="text-ocean underline-offset-4 hover:underline"

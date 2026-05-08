@@ -9,15 +9,17 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="border-b border-charcoal/10 bg-cream">
+    <header className="border-charcoal/10 bg-cream border-b">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
-        <Link href="/" className="group flex flex-col leading-none" aria-label="Hi Pangandaran home">
-          <span
-            className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-ocean transition-colors group-hover:text-coral md:text-3xl"
-          >
+        <Link
+          href="/"
+          className="group flex flex-col leading-none"
+          aria-label="Hi Pangandaran home"
+        >
+          <span className="text-ocean group-hover:text-coral font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight transition-colors md:text-3xl">
             Hi Pangandaran
           </span>
-          <span className="mt-0.5 font-[family-name:var(--font-body)] text-xs text-charcoal/60 md:text-sm">
+          <span className="text-charcoal/60 mt-0.5 font-[family-name:var(--font-body)] text-xs md:text-sm">
             your honest guide
           </span>
         </Link>
@@ -28,7 +30,7 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-charcoal/80 transition-colors hover:text-ocean"
+                  className="text-charcoal/80 hover:text-ocean text-sm transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -41,7 +43,7 @@ export function Header() {
         <nav aria-label="Primary mobile" className="md:hidden">
           <Link
             href="/guides"
-            className="text-sm font-medium text-ocean underline-offset-4 hover:underline"
+            className="text-ocean text-sm font-medium underline-offset-4 hover:underline"
           >
             Guides
           </Link>

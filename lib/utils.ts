@@ -22,9 +22,7 @@ export interface Heading {
 }
 
 export function extractHeadings(mdx: string): Heading[] {
-  const stripped = mdx
-    .replace(/```[\s\S]*?```/g, '')
-    .replace(/`[^`\n]*`/g, '')
+  const stripped = mdx.replace(/```[\s\S]*?```/g, '').replace(/`[^`\n]*`/g, '')
 
   const headings: Heading[] = []
   const seen = new Map<string, number>()

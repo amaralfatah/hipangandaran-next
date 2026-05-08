@@ -9,7 +9,7 @@ function Heading2({ className, children, id, ...rest }: ComponentPropsWithoutRef
     <h2
       id={headingId}
       className={cn(
-        'mt-12 scroll-mt-24 font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-charcoal md:text-3xl',
+        'text-charcoal mt-12 scroll-mt-24 font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight md:text-3xl',
         className,
       )}
       {...rest}
@@ -25,7 +25,7 @@ function Heading3({ className, children, id, ...rest }: ComponentPropsWithoutRef
     <h3
       id={headingId}
       className={cn(
-        'mt-8 scroll-mt-24 font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight text-charcoal md:text-2xl',
+        'text-charcoal mt-8 scroll-mt-24 font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight md:text-2xl',
         className,
       )}
       {...rest}
@@ -36,7 +36,7 @@ function Heading3({ className, children, id, ...rest }: ComponentPropsWithoutRef
 }
 
 function Paragraph({ className, ...rest }: ComponentPropsWithoutRef<'p'>) {
-  return <p className={cn('mt-4 leading-relaxed text-charcoal/85', className)} {...rest} />
+  return <p className={cn('text-charcoal/85 mt-4 leading-relaxed', className)} {...rest} />
 }
 
 function Anchor({ className, href, ...rest }: ComponentPropsWithoutRef<'a'>) {
@@ -53,23 +53,20 @@ function Anchor({ className, href, ...rest }: ComponentPropsWithoutRef<'a'>) {
 
 function UnorderedList({ className, ...rest }: ComponentPropsWithoutRef<'ul'>) {
   return (
-    <ul className={cn('mt-4 list-disc space-y-2 pl-6 text-charcoal/85', className)} {...rest} />
+    <ul className={cn('text-charcoal/85 mt-4 list-disc space-y-2 pl-6', className)} {...rest} />
   )
 }
 
 function OrderedList({ className, ...rest }: ComponentPropsWithoutRef<'ol'>) {
   return (
-    <ol className={cn('mt-4 list-decimal space-y-2 pl-6 text-charcoal/85', className)} {...rest} />
+    <ol className={cn('text-charcoal/85 mt-4 list-decimal space-y-2 pl-6', className)} {...rest} />
   )
 }
 
 function Blockquote({ className, ...rest }: ComponentPropsWithoutRef<'blockquote'>) {
   return (
     <blockquote
-      className={cn(
-        'mt-6 border-l-4 border-ocean/40 pl-4 text-charcoal/75 italic',
-        className,
-      )}
+      className={cn('border-ocean/40 text-charcoal/75 mt-6 border-l-4 pl-4 italic', className)}
       {...rest}
     />
   )
@@ -79,7 +76,7 @@ function InlineCode({ className, ...rest }: ComponentPropsWithoutRef<'code'>) {
   return (
     <code
       className={cn(
-        'rounded bg-charcoal/8 px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[0.9em]',
+        'bg-charcoal/8 rounded px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[0.9em]',
         className,
       )}
       {...rest}

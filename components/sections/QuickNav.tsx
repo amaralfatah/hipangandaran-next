@@ -39,10 +39,10 @@ const cards: QuickNavCard[] = [
 export function QuickNav() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
-      <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-charcoal md:text-3xl">
+      <h2 className="text-charcoal font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight md:text-3xl">
         Start here
       </h2>
-      <p className="mt-2 max-w-2xl text-sm text-charcoal/70 md:text-base">
+      <p className="text-charcoal/70 mt-2 max-w-2xl text-sm md:text-base">
         Four shortcuts to the questions most people ask before they land.
       </p>
 
@@ -51,23 +51,23 @@ export function QuickNav() {
           <li key={card.title}>
             <Link
               href={card.href}
-              className="group flex h-full flex-col rounded-2xl border border-charcoal/10 bg-cream p-4 transition-colors hover:border-ocean/40 hover:bg-sand/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-2 focus-visible:ring-offset-cream md:p-6"
+              className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean focus-visible:ring-offset-cream flex h-full flex-col rounded-2xl border p-4 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:p-6"
               aria-label={`${card.title}${card.comingSoon ? ' (coming soon)' : ''}`}
             >
               <span aria-hidden="true" className="text-3xl md:text-4xl">
                 {card.emoji}
               </span>
               <span className="mt-3 flex items-center gap-2">
-                <span className="font-[family-name:var(--font-display)] text-base font-semibold text-charcoal group-hover:text-ocean md:text-lg">
+                <span className="text-charcoal group-hover:text-ocean font-[family-name:var(--font-display)] text-base font-semibold md:text-lg">
                   {card.title}
                 </span>
                 {card.comingSoon && (
-                  <span className="rounded-full bg-warning/15 px-2 py-0.5 text-[10px] font-medium tracking-wide text-warning uppercase">
+                  <span className="bg-warning/15 text-warning rounded-full px-2 py-0.5 text-[10px] font-medium tracking-wide uppercase">
                     Soon
                   </span>
                 )}
               </span>
-              <span className="mt-1 hidden text-sm text-charcoal/70 md:block">
+              <span className="text-charcoal/70 mt-1 hidden text-sm md:block">
                 {card.description}
               </span>
             </Link>

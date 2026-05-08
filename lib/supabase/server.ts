@@ -9,10 +9,6 @@ if (!url) throw new Error('Missing NEXT_PUBLIC_SUPABASE_URL')
 if (!serviceRoleKey) throw new Error('Missing SUPABASE_SERVICE_ROLE_KEY')
 
 // Service-role client — bypasses RLS. NEVER import from client components.
-export const supabaseAdmin: SupabaseClient<Database> = createClient<Database>(
-  url,
-  serviceRoleKey,
-  {
-    auth: { persistSession: false, autoRefreshToken: false },
-  },
-)
+export const supabaseAdmin: SupabaseClient<Database> = createClient<Database>(url, serviceRoleKey, {
+  auth: { persistSession: false, autoRefreshToken: false },
+})

@@ -7,7 +7,7 @@ export function Hero() {
           Awaiting URL from user or photographer credit. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-ocean via-ocean/85 to-coral/70"
+        className="from-ocean via-ocean/85 to-coral/70 absolute inset-0 -z-10 bg-gradient-to-br"
       />
       <div
         aria-hidden="true"
@@ -15,26 +15,26 @@ export function Hero() {
       />
 
       <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-32">
-        <p className="font-[family-name:var(--font-mono)] text-xs tracking-widest text-cream/80 uppercase">
+        <p className="text-cream/80 font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
           Pangandaran · Batukaras · Green Canyon
         </p>
-        <h1 className="mt-4 max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-cream md:text-6xl">
+        <h1 className="text-cream mt-4 max-w-3xl text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
           Your honest guide to Pangandaran &amp; Batukaras
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-cream/90 md:text-xl">
+        <p className="text-cream/90 mt-6 max-w-2xl text-lg md:text-xl">
           For surfers, digital nomads, and adventurers — not tour groups. Real prices, real WiFi
           speeds, real beaches worth your time.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/guides"
-            className="inline-flex h-13 items-center justify-center rounded-full bg-coral px-7 text-base font-medium text-cream transition-colors hover:bg-coral/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral focus-visible:ring-offset-2 focus-visible:ring-offset-ocean"
+            className="bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral focus-visible:ring-offset-ocean inline-flex h-13 items-center justify-center rounded-full px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             Start planning
           </Link>
           <Link
             href="/places/accommodation"
-            className="inline-flex h-13 items-center justify-center rounded-full border border-cream/50 bg-transparent px-7 text-base font-medium text-cream transition-colors hover:border-cream hover:bg-cream/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2 focus-visible:ring-offset-ocean"
+            className="border-cream/50 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-ocean inline-flex h-13 items-center justify-center rounded-full border bg-transparent px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             Find accommodation
           </Link>

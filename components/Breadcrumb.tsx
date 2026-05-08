@@ -11,7 +11,7 @@ export interface BreadcrumbProps {
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-charcoal/65">
+    <nav aria-label="Breadcrumb" className="text-charcoal/65 text-sm">
       <ol className="flex flex-wrap items-center gap-1.5">
         {items.map((item, idx) => {
           const last = idx === items.length - 1
@@ -22,7 +22,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
                   {item.label}
                 </Link>
               ) : (
-                <span className={last ? 'truncate text-charcoal/85' : ''}>{item.label}</span>
+                <span className={last ? 'text-charcoal/85 truncate' : ''}>{item.label}</span>
               )}
               {!last && (
                 <span aria-hidden="true" className="text-charcoal/40">

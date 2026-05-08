@@ -22,16 +22,16 @@ export async function LatestGuides() {
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-charcoal md:text-3xl">
+          <h2 className="text-charcoal font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight md:text-3xl">
             Latest guides
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-charcoal/70 md:text-base">
+          <p className="text-charcoal/70 mt-2 max-w-xl text-sm md:text-base">
             Verified in the last few weeks — prices, times, and who to talk to.
           </p>
         </div>
         <Link
           href="/guides"
-          className="hidden text-sm text-ocean underline-offset-4 hover:underline md:inline"
+          className="text-ocean hidden text-sm underline-offset-4 hover:underline md:inline"
         >
           All guides →
         </Link>
@@ -53,7 +53,7 @@ export async function LatestGuides() {
                   <CardContent>{frontmatter.description}</CardContent>
                   <CardFooter>
                     <span>By {frontmatter.author}</span>
-                    <span className="font-[family-name:var(--font-mono)] text-xs text-charcoal/60">
+                    <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
                       {frontmatter.readingTime} min · {frontmatter.publishedAt}
                     </span>
                   </CardFooter>
@@ -65,7 +65,7 @@ export async function LatestGuides() {
       </ul>
 
       <div className="mt-8 md:hidden">
-        <Link href="/guides" className="text-sm text-ocean underline-offset-4 hover:underline">
+        <Link href="/guides" className="text-ocean text-sm underline-offset-4 hover:underline">
           All guides →
         </Link>
       </div>

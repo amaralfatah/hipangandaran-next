@@ -54,7 +54,8 @@ export function EmailCapture({
         const data = (await res.json().catch(() => null)) as { error?: string } | null
         setStatus('error')
         setMessage(
-          data?.error ?? "Couldn't save your email — please try again or email hello@hipangandaran.com.",
+          data?.error ??
+            "Couldn't save your email — please try again or email hello@hipangandaran.com.",
         )
         return
       }
@@ -64,21 +65,18 @@ export function EmailCapture({
       setEmail('')
     } catch {
       setStatus('error')
-      setMessage("Network hiccup — please try again in a moment.")
+      setMessage('Network hiccup — please try again in a moment.')
     }
   }
 
   return (
     <section
-      className={cn(
-        'rounded-3xl border border-charcoal/10 bg-sand/40 p-6 md:p-10',
-        className,
-      )}
+      className={cn('border-charcoal/10 bg-sand/40 rounded-3xl border p-6 md:p-10', className)}
     >
-      <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold text-charcoal md:text-3xl">
+      <h2 className="text-charcoal font-[family-name:var(--font-display)] text-2xl font-semibold md:text-3xl">
         {heading}
       </h2>
-      <p className="mt-2 max-w-xl text-sm text-charcoal/75 md:text-base">{description}</p>
+      <p className="text-charcoal/75 mt-2 max-w-xl text-sm md:text-base">{description}</p>
 
       <form onSubmit={onSubmit} noValidate className="mt-5 flex flex-col gap-3 sm:flex-row">
         {/* Honeypot — must stay invisible to humans, visible to bots */}
@@ -109,9 +107,9 @@ export function EmailCapture({
             onChange={(e) => setEmail(e.target.value)}
             disabled={status === 'submitting' || status === 'success'}
             className={cn(
-              'h-11 w-full rounded-full border border-charcoal/15 bg-cream px-5 text-sm text-charcoal',
+              'border-charcoal/15 bg-cream text-charcoal h-11 w-full rounded-full border px-5 text-sm',
               'placeholder:text-charcoal/40',
-              'focus-visible:border-ocean focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean/40',
+              'focus-visible:border-ocean focus-visible:ring-ocean/40 focus-visible:ring-2 focus-visible:outline-none',
               'disabled:opacity-60',
             )}
             aria-invalid={status === 'error'}
@@ -132,10 +130,7 @@ export function EmailCapture({
         <p
           id="email-capture-msg"
           role={status === 'error' ? 'alert' : 'status'}
-          className={cn(
-            'mt-3 text-sm',
-            status === 'error' ? 'text-error' : 'text-forest',
-          )}
+          className={cn('mt-3 text-sm', status === 'error' ? 'text-error' : 'text-forest')}
         >
           {message}
         </p>

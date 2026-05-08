@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Brand */
@@ -31,8 +31,8 @@ html {
 }
 
 body {
-  font-family: var(--font-body), Georgia, "Times New Roman", serif;
-  font-feature-settings: "kern", "liga";
+  font-family: var(--font-body), Georgia, 'Times New Roman', serif;
+  font-feature-settings: 'kern', 'liga';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,7 +40,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-family: var(--font-display), Georgia, 'Times New Roman', serif;
 }
 
 code,

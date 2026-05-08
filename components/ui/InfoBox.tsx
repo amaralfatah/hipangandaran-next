@@ -44,11 +44,8 @@ export function InfoBox({ type = 'info', title, children, className }: InfoBoxPr
       role="note"
       className={cn('my-6 flex gap-3 rounded-2xl border p-4 md:p-5', cfg.container, className)}
     >
-      <Icon
-        aria-hidden="true"
-        className={cn('mt-0.5 h-5 w-5 flex-shrink-0', cfg.iconClass)}
-      />
-      <div className="flex-1 text-sm text-charcoal/85">
+      <Icon aria-hidden="true" className={cn('mt-0.5 h-5 w-5 flex-shrink-0', cfg.iconClass)} />
+      <div className="text-charcoal/85 flex-1 text-sm">
         <p
           className={cn(
             'font-[family-name:var(--font-display)] text-sm font-semibold tracking-wide',

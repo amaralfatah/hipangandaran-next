@@ -4,10 +4,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hipangandaran.com'
 
 function JsonLdScript({ data }: { data: object }) {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   )
 }
 

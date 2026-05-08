@@ -13,8 +13,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-ocean text-cream hover:bg-ocean/90 focus-visible:ring-ocean',
   secondary:
     'border border-charcoal/20 bg-transparent text-charcoal hover:border-ocean hover:text-ocean focus-visible:ring-ocean',
-  ghost:
-    'bg-transparent text-charcoal hover:bg-charcoal/5 focus-visible:ring-ocean',
+  ghost: 'bg-transparent text-charcoal hover:bg-charcoal/5 focus-visible:ring-ocean',
   coral: 'bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral',
 }
 

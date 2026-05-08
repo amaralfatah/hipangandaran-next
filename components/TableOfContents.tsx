@@ -12,13 +12,10 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
   const list = (
     <ol className="space-y-2 text-sm">
       {headings.map((h) => (
-        <li
-          key={h.slug}
-          className={cn(h.level === 3 && 'pl-4')}
-        >
+        <li key={h.slug} className={cn(h.level === 3 && 'pl-4')}>
           <a
             href={`#${h.slug}`}
-            className="text-charcoal/70 underline-offset-4 transition-colors hover:text-ocean hover:underline"
+            className="text-charcoal/70 hover:text-ocean underline-offset-4 transition-colors hover:underline"
           >
             {h.text}
           </a>
@@ -30,8 +27,13 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
   return (
     <>
       {/* Mobile — collapsible */}
-      <details className={cn('group mb-8 rounded-2xl border border-charcoal/10 bg-cream p-4 md:hidden', className)}>
-        <summary className="cursor-pointer list-none font-[family-name:var(--font-display)] text-sm font-semibold text-charcoal">
+      <details
+        className={cn(
+          'group border-charcoal/10 bg-cream mb-8 rounded-2xl border p-4 md:hidden',
+          className,
+        )}
+      >
+        <summary className="text-charcoal cursor-pointer list-none font-[family-name:var(--font-display)] text-sm font-semibold">
           <span className="inline-flex items-center gap-2">
             <span className="transition-transform group-open:rotate-90" aria-hidden="true">
               ›
@@ -45,12 +47,9 @@ export function TableOfContents({ headings, className }: TableOfContentsProps) {
       </details>
 
       {/* Desktop — sticky sidebar */}
-      <aside
-        className={cn('hidden md:block', className)}
-        aria-label="Table of contents"
-      >
+      <aside className={cn('hidden md:block', className)} aria-label="Table of contents">
         <div className="sticky top-8">
-          <p className="font-[family-name:var(--font-display)] text-xs font-semibold tracking-widest text-charcoal/60 uppercase">
+          <p className="text-charcoal/60 font-[family-name:var(--font-display)] text-xs font-semibold tracking-widest uppercase">
             On this page
           </p>
           <nav className="mt-3">{list}</nav>

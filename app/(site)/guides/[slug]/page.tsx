@@ -95,23 +95,27 @@ export default async function ArticlePage({ params }: PageProps) {
           { name: frontmatter.title, url: `/guides/${slug}` },
         ]}
       />
-      <Breadcrumb category={frontmatter.category} categoryLabel={categoryLabel} title={frontmatter.title} />
+      <Breadcrumb
+        category={frontmatter.category}
+        categoryLabel={categoryLabel}
+        title={frontmatter.title}
+      />
 
       <header className="mt-6 max-w-3xl">
         <Badge variant="surf">{categoryLabel}</Badge>
-        <h1 className="mt-4 font-[family-name:var(--font-display)] text-4xl leading-tight font-semibold tracking-tight text-charcoal md:text-5xl">
+        <h1 className="text-charcoal mt-4 font-[family-name:var(--font-display)] text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
           {frontmatter.title}
         </h1>
-        <p className="mt-4 text-lg text-charcoal/80">{frontmatter.description}</p>
-        <p className="mt-4 font-[family-name:var(--font-mono)] text-xs text-charcoal/60">
+        <p className="text-charcoal/80 mt-4 text-lg">{frontmatter.description}</p>
+        <p className="text-charcoal/60 mt-4 font-[family-name:var(--font-mono)] text-xs">
           By {frontmatter.author} · {frontmatter.readingTime} min read · last updated{' '}
           {formatVerificationDate(frontmatter.updatedAt)}
         </p>
       </header>
 
       {frontmatter.affiliateDisclosure && (
-        <div className="mt-6 max-w-3xl rounded-2xl border border-warning/30 bg-warning/8 p-4 text-sm text-charcoal/85">
-          <strong className="font-semibold text-warning">Affiliate disclosure:</strong> Some links
+        <div className="border-warning/30 bg-warning/8 text-charcoal/85 mt-6 max-w-3xl rounded-2xl border p-4 text-sm">
+          <strong className="text-warning font-semibold">Affiliate disclosure:</strong> Some links
           below are affiliate links. If you book through them, we may earn a small commission at no
           extra cost to you. We only recommend places we&rsquo;d tell a friend about. See our{' '}
           <Link
@@ -124,7 +128,7 @@ export default async function ArticlePage({ params }: PageProps) {
         </div>
       )}
 
-      <figure className="mt-8 overflow-hidden rounded-3xl border border-charcoal/10">
+      <figure className="border-charcoal/10 mt-8 overflow-hidden rounded-3xl border">
         <Image
           src={frontmatter.featuredImage}
           alt={frontmatter.featuredImageAlt}
@@ -147,10 +151,7 @@ export default async function ArticlePage({ params }: PageProps) {
             <p>
               Prices and details verified {formatVerificationDate(frontmatter.updatedAt)}. Spotted
               something out of date?{' '}
-              <Link
-                href="/about#contact"
-                className="text-ocean underline-offset-4 hover:underline"
-              >
+              <Link href="/about#contact" className="text-ocean underline-offset-4 hover:underline">
                 Tell us what changed
               </Link>{' '}
               and we&rsquo;ll fix it.
@@ -162,8 +163,8 @@ export default async function ArticlePage({ params }: PageProps) {
       </div>
 
       {related.length > 0 && (
-        <section className="mt-16 border-t border-charcoal/10 pt-12">
-          <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-charcoal md:text-3xl">
+        <section className="border-charcoal/10 mt-16 border-t pt-12">
+          <h2 className="text-charcoal font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight md:text-3xl">
             Related guides
           </h2>
           <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
@@ -180,7 +181,7 @@ export default async function ArticlePage({ params }: PageProps) {
                     <CardContent>{r.frontmatter.description}</CardContent>
                     <CardFooter>
                       <span>By {r.frontmatter.author}</span>
-                      <span className="font-[family-name:var(--font-mono)] text-xs text-charcoal/60">
+                      <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
                         {r.frontmatter.readingTime} min
                       </span>
                     </CardFooter>
@@ -209,7 +210,7 @@ function Breadcrumb({
   title: string
 }) {
   return (
-    <nav aria-label="Breadcrumb" className="text-sm text-charcoal/65">
+    <nav aria-label="Breadcrumb" className="text-charcoal/65 text-sm">
       <ol className="flex flex-wrap items-center gap-1.5">
         <li>
           <Link href="/" className="hover:text-ocean">
@@ -224,15 +225,12 @@ function Breadcrumb({
         </li>
         <li aria-hidden="true">›</li>
         <li>
-          <Link
-            href={`/guides?category=${category}`}
-            className="hover:text-ocean"
-          >
+          <Link href={`/guides?category=${category}`} className="hover:text-ocean">
             {categoryLabel}
           </Link>
         </li>
         <li aria-hidden="true">›</li>
-        <li className="truncate text-charcoal/85">{title}</li>
+        <li className="text-charcoal/85 truncate">{title}</li>
       </ol>
     </nav>
   )
