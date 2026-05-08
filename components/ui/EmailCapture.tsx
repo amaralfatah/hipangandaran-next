@@ -10,12 +10,14 @@ export interface EmailCaptureProps {
   heading?: string
   description?: string
   className?: string
+  source?: string
 }
 
 export function EmailCapture({
   heading = 'Get the next guide in your inbox',
   description = 'One short email when a new article goes live. No spam, unsubscribe anytime.',
   className,
+  source = 'homepage',
 }: EmailCaptureProps) {
   const [email, setEmail] = useState('')
   const [website, setWebsite] = useState('') // honeypot
@@ -41,13 +43,29 @@ export function EmailCapture({
     setStatus('submitting')
     setMessage('')
 
-    // §1.9 will wire this up to /api/subscribe
-    console.log('[EmailCapture] would subscribe:', email)
-    await new Promise((resolve) => setTimeout(resolve, 250))
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, source, website }),
+      })
 
-    setStatus('success')
-    setMessage("You're on the list — see you soon.")
-    setEmail('')
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as { error?: string } | null
+        setStatus('error')
+        setMessage(
+          data?.error ?? "Couldn't save your email — please try again or email hello@hipangandaran.com.",
+        )
+        return
+      }
+
+      setStatus('success')
+      setMessage("You're on the list — see you soon.")
+      setEmail('')
+    } catch {
+      setStatus('error')
+      setMessage("Network hiccup — please try again in a moment.")
+    }
   }
 
   return (
