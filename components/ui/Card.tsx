@@ -22,7 +22,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(function Card(
 })
 
 export function CardHeader({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('mb-3 flex flex-col gap-1', className)} {...rest} />
+  return <div className={cn('mb-3 flex flex-col items-start gap-2', className)} {...rest} />
 }
 
 export function CardTitle({ className, ...rest }: HTMLAttributes<HTMLHeadingElement>) {
@@ -42,7 +42,7 @@ export function CardDescription({ className, ...rest }: HTMLAttributes<HTMLParag
 }
 
 export function CardContent({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn('text-charcoal/85 text-sm', className)} {...rest} />
+  return <div className={cn('text-charcoal/85 line-clamp-3 text-sm', className)} {...rest} />
 }
 
 export function CardFooter({ className, ...rest }: HTMLAttributes<HTMLDivElement>) {
