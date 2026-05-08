@@ -8,6 +8,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { EmailCapture } from '@/components/ui/EmailCapture'
 import { InfoBox } from '@/components/ui/InfoBox'
 import { TableOfContents } from '@/components/TableOfContents'
+import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd'
 import { mdxComponents } from '@/components/mdx'
 import { getAllArticles, getAllSlugs, getArticleBySlug } from '@/lib/mdx'
 import { extractHeadings, formatVerificationDate } from '@/lib/utils'
@@ -85,6 +86,15 @@ export default async function ArticlePage({ params }: PageProps) {
 
   return (
     <article className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
+      <ArticleJsonLd slug={slug} frontmatter={frontmatter} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Guides', url: '/guides' },
+          { name: categoryLabel, url: `/guides?category=${frontmatter.category}` },
+          { name: frontmatter.title, url: `/guides/${slug}` },
+        ]}
+      />
       <Breadcrumb category={frontmatter.category} categoryLabel={categoryLabel} title={frontmatter.title} />
 
       <header className="mt-6 max-w-3xl">
