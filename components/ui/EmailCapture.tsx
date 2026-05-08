@@ -1,8 +1,14 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useState, useSyncExternalStore, type FormEvent } from 'react'
 import { Button } from './Button'
 import { cn } from '@/lib/utils'
+
+// Hydration guard — server returns false, client returns true after hydrate.
+// Prevents native form submission before React attaches handlers.
+const subscribe = () => () => {}
+const getSnapshot = () => true
+const getServerSnapshot = () => false
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -23,6 +29,7 @@ export function EmailCapture({
   const [website, setWebsite] = useState('') // honeypot
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
+  const hydrated = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -120,7 +127,7 @@ export function EmailCapture({
         <Button
           type="submit"
           variant="primary"
-          disabled={status === 'submitting' || status === 'success'}
+          disabled={!hydrated || status === 'submitting' || status === 'success'}
         >
           {status === 'submitting' ? 'Sending…' : status === 'success' ? 'Subscribed' : 'Subscribe'}
         </Button>
