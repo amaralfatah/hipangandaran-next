@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const navLinks = [
   { href: '/guides', label: 'Guides' },
-  { href: '/places', label: 'Places' },
-  { href: '/tools/cost-calculator', label: 'Cost Calculator' },
+  { href: '/places/accommodation', label: 'Stay' },
+  { href: '/places/cafes', label: 'Cafes' },
   { href: '/about', label: 'About' },
 ]
 

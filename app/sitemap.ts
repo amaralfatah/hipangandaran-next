@@ -1,10 +1,11 @@
 import type { MetadataRoute } from 'next'
 import { getAllArticles } from '@/lib/mdx'
+import { getAllPlaceSlugs } from '@/lib/places'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://hipangandaran.com'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const articles = await getAllArticles()
+  const [articles, places] = await Promise.all([getAllArticles(), getAllPlaceSlugs()])
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), priority: 1.0, changeFrequency: 'weekly' },
@@ -12,6 +13,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${BASE_URL}/guides`,
       lastModified: new Date(),
       priority: 0.9,
+      changeFrequency: 'weekly',
+    },
+    {
+      url: `${BASE_URL}/places`,
+      lastModified: new Date(),
+      priority: 0.8,
+      changeFrequency: 'weekly',
+    },
+    {
+      url: `${BASE_URL}/places/accommodation`,
+      lastModified: new Date(),
+      priority: 0.85,
+      changeFrequency: 'weekly',
+    },
+    {
+      url: `${BASE_URL}/places/cafes`,
+      lastModified: new Date(),
+      priority: 0.8,
       changeFrequency: 'weekly',
     },
     {
@@ -41,5 +60,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly',
   }))
 
-  return [...staticEntries, ...articleEntries]
+  const placeEntries: MetadataRoute.Sitemap = places.map((p) => ({
+    url: `${BASE_URL}/places/${p.slug}`,
+    lastModified: new Date(),
+    priority: 0.6,
+    changeFrequency: 'monthly',
+  }))
+
+  return [...staticEntries, ...articleEntries, ...placeEntries]
 }
