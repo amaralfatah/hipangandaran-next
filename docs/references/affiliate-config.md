@@ -7,52 +7,44 @@
 | Traveloka | https://traveloka.com/affiliate | 2 | Best untuk akomodasi Indonesia |
 | Agoda | https://agoda.com/affiliates | 2 | Sekunder untuk akomodasi |
 | Booking.com | https://booking.com/affiliate-program | 2 | Cover internasional yang stay long-term |
-| GetYourGuide | https://getyourguide.com/partner | 2 | Untuk activities (surf lesson, Green Canyon tour) |
-| SafetyWing | https://safetywing.com/affiliate | 3 | Travel insurance untuk nomad |
 
-## URL Builder Implementation
+## Cara Kerja Per-Partner
 
-```ts
-// lib/affiliate.ts
-const env = (key: string) => process.env[`NEXT_PUBLIC_${key}`] ?? ''
+### Traveloka — Per-link (bukan universal ID)
 
-export const affiliate = {
-  traveloka: (propertyId: string) => {
-    const params = new URLSearchParams({
-      id: propertyId,
-      affiliate_id: env('TRAVELOKA_AFFILIATE_ID'),
-      utm_source: 'hipangandaran',
-      utm_medium: 'affiliate',
-      utm_campaign: 'accommodation',
-    })
-    return `https://www.traveloka.com/hotel/detail?${params}`
-  },
+Traveloka **tidak** punya universal affiliate ID. Setiap hotel generate link tracking-nya sendiri dari dashboard Traveloka.
 
-  agoda: (propertyId: string) => {
-    const params = new URLSearchParams({
-      cid: env('AGODA_CID'),
-      utm_source: 'hipangandaran',
-    })
-    return `https://www.agoda.com/hotel/${propertyId}?${params}`
-  },
+**Cara pakai:**
+1. Buka dashboard Traveloka affiliate
+2. Cari hotel yang ingin dipromosikan
+3. Klik "Share" → copy affiliate link
+4. Simpan link tersebut di kolom `booking_affiliate_url` di tabel `accommodations` (Supabase) atau langsung di MDX
 
-  getyourguide: (activityId: string) => {
-    const params = new URLSearchParams({
-      partner_id: env('GYG_PARTNER_ID'),
-      utm_source: 'hipangandaran',
-    })
-    return `https://www.getyourguide.com/activity/${activityId}?${params}`
-  },
+```tsx
+// Di AccommodationCard / halaman detail — pakai url langsung dari DB, fallback ke search
+<AffiliateButton
+  partner="traveloka"
+  {...(item.booking_affiliate_url
+    ? { url: item.booking_affiliate_url }
+    : { query: `${item.name} Batu Karas` })}
+  utmContent={`card:${item.slug}`}
+>
+  Book on Traveloka
+</AffiliateButton>
 
-  safetywing: () => {
-    const params = new URLSearchParams({
-      referenceID: env('SAFETYWING_REF_ID'),
-      utm_source: 'hipangandaran',
-    })
-    return `https://safetywing.com/?${params}`
-  },
-} as const
+// Di MDX artikel — paste link langsung
+<AffiliateButton partner="traveloka" url="https://www.traveloka.com/hotel/detail?...tracking=xxx">
+  Book on Traveloka
+</AffiliateButton>
 ```
+
+### Agoda — Universal CID (`NEXT_PUBLIC_AGODA_CID`)
+
+Set CID di `.env`, lalu `buildAffiliateUrl` otomatis menyisipkannya ke semua link Agoda.
+
+### Booking.com — UTM only (belum ada affiliate ID)
+
+Link Booking.com saat ini hanya membawa UTM params. Daftar affiliate program di booking.com/affiliate-program jika ingin menambah tracking ID.
 
 ## AffiliateButton Component
 

@@ -274,7 +274,7 @@ export function AccommodationForm({ accommodation }: { accommodation?: Row }) {
         />
       </Field>
 
-      <Field label="Booking Affiliate URL">
+      <Field label="Traveloka Affiliate URL">
         <input
           type="url"
           value={form.booking_affiliate_url}

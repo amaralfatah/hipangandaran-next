@@ -74,7 +74,9 @@ export function AccommodationCard({ item }: { item: Accommodation }) {
 
         <AffiliateButton
           partner="traveloka"
-          query={`${item.name} ${LOCATION_LABELS[item.location_area]}`}
+          {...(item.booking_affiliate_url
+            ? { url: item.booking_affiliate_url }
+            : { query: `${item.name} ${LOCATION_LABELS[item.location_area]}` })}
           utmContent={`accommodation-card:${item.slug}`}
           variant="primary"
           className="mt-1"

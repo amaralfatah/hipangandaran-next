@@ -5,7 +5,7 @@
 // Per CLAUDE.md hard rule #4: every <a> built from these MUST carry
 // rel="nofollow sponsored noopener noreferrer".
 
-export type AffiliatePartner = 'traveloka' | 'agoda' | 'booking' | 'gyg' | 'safetywing'
+export type AffiliatePartner = 'traveloka' | 'agoda' | 'booking'
 
 export interface AffiliateLinkOptions {
   partner: AffiliatePartner
@@ -15,10 +15,7 @@ export interface AffiliateLinkOptions {
 }
 
 const ENV = {
-  travelokaAffiliateId: process.env.NEXT_PUBLIC_TRAVELOKA_AFFILIATE_ID ?? '',
   agodaCid: process.env.NEXT_PUBLIC_AGODA_CID ?? '',
-  gygPartnerId: process.env.NEXT_PUBLIC_GYG_PARTNER_ID ?? '',
-  safetywingRefId: process.env.NEXT_PUBLIC_SAFETYWING_REF_ID ?? '',
 }
 
 function appendParams(url: string, params: Record<string, string>): string {
@@ -44,15 +41,11 @@ export function buildAffiliateUrl({
 
   switch (partner) {
     case 'traveloka':
-      return appendParams(url, { ...utm, affId: ENV.travelokaAffiliateId })
+      return appendParams(url, utm)
     case 'agoda':
       return appendParams(url, { ...utm, cid: ENV.agodaCid })
     case 'booking':
-      return appendParams(url, { ...utm, aid: ENV.travelokaAffiliateId })
-    case 'gyg':
-      return appendParams(url, { ...utm, partner_id: ENV.gygPartnerId })
-    case 'safetywing':
-      return appendParams(url, { ...utm, referenceID: ENV.safetywingRefId })
+      return appendParams(url, utm)
   }
 }
 
