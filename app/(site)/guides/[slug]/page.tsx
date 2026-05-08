@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { EmailCapture } from '@/components/ui/EmailCapture'
@@ -144,7 +145,11 @@ export default async function ArticlePage({ params }: PageProps) {
           <TableOfContents headings={headings} className="md:hidden" />
 
           <div className="prose-base">
-            <MDXRemote source={content} components={mdxComponents} />
+            <MDXRemote
+              source={content}
+              components={mdxComponents}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            />
           </div>
 
           <InfoBox type="info" title="Help us keep this current">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Serif_4, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import { OrganizationJsonLd } from '@/components/JsonLd'
 import './globals.css'
 
@@ -58,6 +59,7 @@ export default function RootLayout({
     >
       <body className="bg-cream text-charcoal flex min-h-full flex-col">
         <OrganizationJsonLd />
+        <Analytics />
         {children}
       </body>
     </html>

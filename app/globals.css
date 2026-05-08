@@ -67,3 +67,40 @@ pre,
   left: 0.5rem;
   top: 0.5rem;
 }
+
+/* MDX article table styles */
+.prose-base table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875em;
+  margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose-base thead tr {
+  border-bottom: 2px solid color-mix(in srgb, var(--color-charcoal) 20%, transparent);
+}
+
+.prose-base th {
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem 0;
+  font-size: 0.75em;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: color-mix(in srgb, var(--color-charcoal) 60%, transparent);
+  white-space: nowrap;
+}
+
+.prose-base td {
+  padding: 0.625rem 1rem 0.625rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-charcoal) 10%, transparent);
+  vertical-align: top;
+}
+
+.prose-base tbody tr:last-child td {
+  border-bottom: none;
+}
