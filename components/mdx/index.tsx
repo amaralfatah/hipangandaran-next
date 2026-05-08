@@ -1,7 +1,39 @@
 import type { MDXComponents } from 'mdx/types'
-import type { ComponentPropsWithoutRef } from 'react'
+import type { AnchorHTMLAttributes, ComponentPropsWithoutRef } from 'react'
 import { InfoBox } from '@/components/ui/InfoBox'
+import { AFFILIATE_REL } from '@/lib/affiliate'
 import { cn, reactChildrenToString, slugify } from '@/lib/utils'
+
+type MdxAffiliateButtonVariant = 'primary' | 'coral' | 'secondary'
+const mdxAffBtnBase =
+  'inline-flex h-11 items-center justify-center gap-1.5 rounded-full px-6 text-sm font-medium transition-colors ' +
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-cream'
+const mdxAffBtnVariants: Record<MdxAffiliateButtonVariant, string> = {
+  primary: 'bg-ocean text-cream hover:bg-ocean/90 focus-visible:ring-ocean',
+  coral: 'bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral',
+  secondary:
+    'border border-charcoal/20 text-charcoal hover:border-ocean hover:text-ocean focus-visible:ring-ocean',
+}
+function AffiliateButton({
+  href,
+  variant = 'primary',
+  className,
+  children,
+  ...rest
+}: AnchorHTMLAttributes<HTMLAnchorElement> & { variant?: MdxAffiliateButtonVariant }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel={AFFILIATE_REL}
+      className={cn(mdxAffBtnBase, mdxAffBtnVariants[variant], className)}
+      {...rest}
+    >
+      {children}
+      <span aria-hidden="true">→</span>
+    </a>
+  )
+}
 
 function Heading2({ className, children, id, ...rest }: ComponentPropsWithoutRef<'h2'>) {
   const headingId = id ?? slugify(reactChildrenToString(children))
@@ -94,4 +126,5 @@ export const mdxComponents: MDXComponents = {
   blockquote: Blockquote,
   code: InlineCode,
   InfoBox,
+  AffiliateButton,
 }

@@ -4,6 +4,7 @@ const navLinks = [
   { href: '/guides', label: 'Guides' },
   { href: '/places/accommodation', label: 'Stay' },
   { href: '/places/cafes', label: 'Cafes' },
+  { href: '/tools/cost-calculator', label: 'Cost Calculator' },
   { href: '/about', label: 'About' },
 ]
 
