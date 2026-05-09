@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Badge } from '@/components/ui/Badge'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
+import { GuidesList } from '@/components/sections/GuidesList'
 import { getAllArticles } from '@/lib/mdx'
 
 const categoryLabels: Record<string, string> = {
@@ -30,6 +28,7 @@ export const metadata: Metadata = {
 
 export default async function GuidesIndexPage() {
   const articles = await getAllArticles()
+  const items = articles.map(({ slug, frontmatter }) => ({ slug, frontmatter }))
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
@@ -46,34 +45,10 @@ export default async function GuidesIndexPage() {
         </p>
       </header>
 
-      {articles.length === 0 ? (
+      {items.length === 0 ? (
         <p className="text-charcoal/70 mt-12">No guides published yet — check back soon.</p>
       ) : (
-        <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-          {articles.map(({ slug, frontmatter }) => (
-            <li key={slug}>
-              <Link href={`/guides/${slug}`} className="block h-full">
-                <Card asChild className="flex h-full flex-col">
-                  <article>
-                  <CardHeader>
-                    <Badge variant="surf">
-                      {categoryLabels[frontmatter.category] ?? frontmatter.category}
-                    </Badge>
-                    <CardTitle>{frontmatter.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>{frontmatter.description}</CardContent>
-                  <CardFooter>
-                    <span>By {frontmatter.author}</span>
-                    <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
-                      {frontmatter.readingTime} min · {frontmatter.publishedAt}
-                    </span>
-                  </CardFooter>
-                  </article>
-                </Card>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <GuidesList articles={items} categoryLabels={categoryLabels} />
       )}
     </div>
   )

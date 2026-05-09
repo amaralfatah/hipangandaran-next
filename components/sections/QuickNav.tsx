@@ -1,7 +1,8 @@
 import Link from 'next/link'
+import { Waves, BedDouble, Route, Calculator, type LucideIcon } from 'lucide-react'
 
 interface QuickNavCard {
-  emoji: string
+  icon: LucideIcon
   title: string
   description: string
   href: string
@@ -10,29 +11,28 @@ interface QuickNavCard {
 
 const cards: QuickNavCard[] = [
   {
-    emoji: '🏄',
+    icon: Waves,
     title: 'Surf Guide',
     description: 'Where to surf, board rental rates, who to ask for lessons.',
     href: '/guides?category=activities',
   },
   {
-    emoji: '🏠',
+    icon: BedDouble,
     title: 'Find Accommodation',
     description: 'Surf camps, villas, and homestays — filtered honestly.',
     href: '/places/accommodation',
   },
   {
-    emoji: '🗺️',
+    icon: Route,
     title: 'Getting Here',
     description: 'Trains, buses, and the back-road shortcut nobody mentions.',
     href: '/guides?category=transport',
   },
   {
-    emoji: '💰',
+    icon: Calculator,
     title: 'Cost Calculator',
     description: 'Estimate a realistic daily budget in Rp and USD.',
     href: '/tools/cost-calculator',
-    comingSoon: true,
   },
 ]
 
@@ -54,8 +54,11 @@ export function QuickNav() {
               className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean focus-visible:ring-offset-cream flex h-full flex-col rounded-2xl border p-4 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:p-6"
               aria-label={`${card.title}${card.comingSoon ? ' (coming soon)' : ''}`}
             >
-              <span aria-hidden="true" className="text-3xl md:text-4xl">
-                {card.emoji}
+              <span
+                aria-hidden="true"
+                className="bg-ocean/10 text-ocean group-hover:bg-ocean group-hover:text-cream inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors md:h-12 md:w-12"
+              >
+                <card.icon className="h-5 w-5 md:h-6 md:w-6" strokeWidth={1.75} />
               </span>
               <span className="mt-3 flex items-center gap-2">
                 <span className="text-charcoal group-hover:text-ocean font-[family-name:var(--font-display)] text-base font-semibold md:text-lg">
