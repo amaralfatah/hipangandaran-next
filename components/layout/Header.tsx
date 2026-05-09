@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/shadcn/button'
 import { cn } from '@/lib/utils'
@@ -15,9 +15,12 @@ const navLinks = [
   { href: '/about', label: 'About' },
 ]
 
+const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+
 export function Header() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     setOpen(false)
@@ -25,11 +28,37 @@ export function Header() {
 
   useEffect(() => {
     if (!open) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('keydown', onKey)
+
     document.body.style.overflow = 'hidden'
+
+    const panel = document.getElementById('mobile-nav-panel')
+    const focusable = Array.from(panel?.querySelectorAll<HTMLElement>(FOCUSABLE) ?? [])
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    first?.focus()
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpen(false)
+        triggerRef.current?.focus()
+        return
+      }
+      if (e.key === 'Tab' && focusable.length > 0) {
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault()
+            last?.focus()
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault()
+            first?.focus()
+          }
+        }
+      }
+    }
+
+    document.addEventListener('keydown', onKey)
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
@@ -47,7 +76,7 @@ export function Header() {
           <span className="text-ocean group-hover:text-coral font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight transition-colors md:text-3xl">
             Hi Pangandaran
           </span>
-          <span className="text-charcoal/60 mt-0.5 font-[family-name:var(--font-body)] text-xs md:text-sm">
+          <span className="text-charcoal/60 mt-0.5 hidden font-[family-name:var(--font-body)] text-xs sm:block md:text-sm">
             your honest guide
           </span>
         </Link>
@@ -73,6 +102,7 @@ export function Header() {
         </nav>
 
         <Button
+          ref={triggerRef}
           type="button"
           variant="ghost"
           size="icon-sm"
@@ -89,13 +119,15 @@ export function Header() {
       {open && (
         <>
           <div
-            className="bg-charcoal/30 fixed inset-0 top-[65px] z-30 md:hidden"
+            className="bg-charcoal/30 fixed inset-0 z-30 md:hidden"
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
           <nav
             id="mobile-nav-panel"
-            aria-label="Mobile primary"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             className="border-charcoal/10 bg-cream absolute inset-x-0 top-full z-40 border-b shadow-lg md:hidden"
           >
             <ul className="mx-auto flex max-w-6xl flex-col px-4 py-2">

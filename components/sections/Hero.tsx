@@ -28,13 +28,13 @@ export function Hero() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/guides"
-            className="bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral focus-visible:ring-offset-ocean inline-flex h-13 items-center justify-center rounded-full px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral focus-visible:ring-offset-ocean inline-flex h-12 items-center justify-center rounded-full px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             Start planning
           </Link>
           <Link
             href="/places/accommodation"
-            className="border-cream/50 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-ocean inline-flex h-13 items-center justify-center rounded-full border bg-transparent px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="border-cream/50 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-ocean inline-flex h-12 items-center justify-center rounded-full border bg-transparent px-7 text-base font-normal transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             Find accommodation
           </Link>

@@ -12,6 +12,15 @@ const categoryLabels: Record<string, string> = {
   planning: 'Planning',
 }
 
+function formatDate(dateStr: string) {
+  return new Intl.DateTimeFormat('en', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(dateStr))
+}
+
 export async function LatestGuides() {
   const articles = await getAllArticles()
   const latest = articles.slice(0, 3)
@@ -31,7 +40,7 @@ export async function LatestGuides() {
         </div>
         <Link
           href="/guides"
-          className="text-ocean hidden text-sm underline-offset-4 hover:underline md:inline"
+          className="text-ocean shrink-0 text-sm underline-offset-4 hover:underline"
         >
           All guides →
         </Link>
@@ -42,35 +51,34 @@ export async function LatestGuides() {
           const { slug, frontmatter } = article
           return (
             <li key={slug}>
-              <Link href={`/guides/${slug}`} className="block h-full">
-                <Card asChild className="flex h-full flex-col">
-                  <article>
+              <article className="h-full">
+                <Card className="group relative flex h-full flex-col focus-within:ring-2 focus-within:ring-ocean focus-within:ring-offset-2">
                   <CardHeader>
                     <Badge variant="surf">
                       {categoryLabels[frontmatter.category] ?? frontmatter.category}
                     </Badge>
-                    <CardTitle>{frontmatter.title}</CardTitle>
+                    <CardTitle>
+                      <Link
+                        href={`/guides/${slug}`}
+                        className="after:absolute after:inset-0 after:rounded-2xl group-hover:text-ocean focus-visible:outline-none"
+                      >
+                        {frontmatter.title}
+                      </Link>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>{frontmatter.description}</CardContent>
                   <CardFooter>
                     <span>By {frontmatter.author}</span>
                     <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
-                      {frontmatter.readingTime} min · {frontmatter.publishedAt}
+                      {frontmatter.readingTime} min · {formatDate(frontmatter.publishedAt)}
                     </span>
                   </CardFooter>
-                  </article>
                 </Card>
-              </Link>
+              </article>
             </li>
           )
         })}
       </ul>
-
-      <div className="mt-8 md:hidden">
-        <Link href="/guides" className="text-ocean text-sm underline-offset-4 hover:underline">
-          All guides →
-        </Link>
-      </div>
     </section>
   )
 }

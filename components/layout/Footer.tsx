@@ -48,9 +48,9 @@ export function Footer({ lastVerified }: { lastVerified?: string }) {
 
           {footerNav.map((group) => (
             <div key={group.heading}>
-              <h2 className="text-charcoal font-[family-name:var(--font-display)] text-sm font-semibold tracking-wide uppercase">
+              <h3 className="text-charcoal font-[family-name:var(--font-display)] text-sm font-semibold tracking-wide uppercase">
                 {group.heading}
-              </h2>
+              </h3>
               <ul className="mt-3 space-y-2">
                 {group.links.map((link) => (
                   <li key={link.href}>

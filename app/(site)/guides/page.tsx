@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { GuidesList } from '@/components/sections/GuidesList'
 import { getAllArticles } from '@/lib/mdx'
 
@@ -32,7 +33,9 @@ export default async function GuidesIndexPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
-      <header>
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Guides' }]} />
+
+      <header className="mt-6">
         <p className="text-ocean font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
           Guides
         </p>

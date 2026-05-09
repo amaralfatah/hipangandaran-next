@@ -51,7 +51,7 @@ export function QuickNav() {
           <li key={card.title}>
             <Link
               href={card.href}
-              className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean focus-visible:ring-offset-cream flex h-full flex-col rounded-2xl border p-4 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none md:p-6"
+              className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean flex h-full flex-col rounded-2xl border p-4 transition-colors focus-visible:ring-2 focus-visible:outline-none md:p-6"
               aria-label={`${card.title}${card.comingSoon ? ' (coming soon)' : ''}`}
             >
               <span
