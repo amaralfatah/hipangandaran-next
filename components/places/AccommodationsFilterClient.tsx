@@ -5,6 +5,13 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { AccommodationCard } from './AccommodationCard'
 import { Button } from '@/components/ui/Button'
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/shadcn/select'
+import {
   DEFAULT_FILTERS,
   LOCATION_LABELS,
   TYPE_LABELS,
@@ -217,33 +224,41 @@ function FilterPanel({ filters, update, onReset }: FilterPanelProps) {
   return (
     <div className="space-y-6 text-sm">
       <FilterGroup label="Location">
-        <select
+        <Select
           value={filters.location}
-          onChange={(e) => update('location', e.target.value as AccommodationFilters['location'])}
-          className={selectStyle}
+          onValueChange={(v) => update('location', v as AccommodationFilters['location'])}
         >
-          <option value="all">All areas</option>
-          {(Object.keys(LOCATION_LABELS) as LocationArea[]).map((k) => (
-            <option key={k} value={k}>
-              {LOCATION_LABELS[k]}
-            </option>
-          ))}
-        </select>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All areas</SelectItem>
+            {(Object.keys(LOCATION_LABELS) as LocationArea[]).map((k) => (
+              <SelectItem key={k} value={k}>
+                {LOCATION_LABELS[k]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </FilterGroup>
 
       <FilterGroup label="Type">
-        <select
+        <Select
           value={filters.type}
-          onChange={(e) => update('type', e.target.value as AccommodationFilters['type'])}
-          className={selectStyle}
+          onValueChange={(v) => update('type', v as AccommodationFilters['type'])}
         >
-          <option value="all">All types</option>
-          {(Object.keys(TYPE_LABELS) as AccommodationType[]).map((k) => (
-            <option key={k} value={k}>
-              {TYPE_LABELS[k]}
-            </option>
-          ))}
-        </select>
+          <SelectTrigger>
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All types</SelectItem>
+            {(Object.keys(TYPE_LABELS) as AccommodationType[]).map((k) => (
+              <SelectItem key={k} value={k}>
+                {TYPE_LABELS[k]}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </FilterGroup>
 
       <FilterGroup label={`Price (USD/night) — $${filters.priceMin}–$${filters.priceMax}`}>
@@ -342,9 +357,6 @@ function FilterPanel({ filters, update, onReset }: FilterPanelProps) {
     </div>
   )
 }
-
-const selectStyle =
-  'h-10 w-full rounded-full border border-charcoal/15 bg-cream px-4 text-sm text-charcoal focus-visible:border-ocean focus-visible:ring-2 focus-visible:ring-ocean/40 focus-visible:outline-none'
 
 function FilterGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (

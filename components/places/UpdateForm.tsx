@@ -1,7 +1,14 @@
 'use client'
 
-import { useEffect, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { Button } from '@/components/ui/Button'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/shadcn/dialog'
 import { cn } from '@/lib/utils'
 import type { PlaceType } from '@/types/database'
 
@@ -17,24 +24,17 @@ const FIELD_OPTIONS: { value: string; label: string }[] = [
 
 export interface UpdateFormProps {
   place: { id: string; type: PlaceType; name: string }
-  onClose: () => void
+  open: boolean
+  onOpenChange: (open: boolean) => void
 }
 
-export function UpdateForm({ place, onClose }: UpdateFormProps) {
+export function UpdateForm({ place, open, onOpenChange }: UpdateFormProps) {
   const [fieldUpdated, setFieldUpdated] = useState<string>('wifi_speed')
   const [newValue, setNewValue] = useState('')
   const [email, setEmail] = useState('')
   const [honeypot, setHoneypot] = useState('')
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
-
-  useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -76,7 +76,7 @@ export function UpdateForm({ place, onClose }: UpdateFormProps) {
       }
 
       setStatus('success')
-      setMessage('Thanks — we&rsquo;ll review and update.')
+      setMessage('Thanks — we’ll review and update.')
       setNewValue('')
       setEmail('')
     } catch {
@@ -86,40 +86,14 @@ export function UpdateForm({ place, onClose }: UpdateFormProps) {
   }
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-end justify-center md:items-center"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="update-form-title"
-    >
-      <button
-        type="button"
-        aria-label="Close"
-        onClick={onClose}
-        className="bg-charcoal/40 absolute inset-0"
-      />
-      <div className="bg-cream relative w-full max-w-md rounded-t-3xl p-6 md:rounded-3xl">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <h3
-              id="update-form-title"
-              className="font-[family-name:var(--font-display)] text-xl font-semibold"
-            >
-              Report an update
-            </h3>
-            <p className="text-charcoal/65 mt-1 text-sm">{place.name}</p>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            className="text-charcoal/60 hover:text-charcoal text-2xl leading-none"
-          >
-            ×
-          </button>
-        </div>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="top-auto bottom-0 max-w-md translate-y-0 rounded-t-3xl rounded-b-none p-6 sm:top-1/2 sm:bottom-auto sm:translate-y-[-50%] sm:rounded-3xl">
+        <DialogHeader>
+          <DialogTitle>Report an update</DialogTitle>
+          <DialogDescription>{place.name}</DialogDescription>
+        </DialogHeader>
 
-        <form onSubmit={onSubmit} noValidate className="mt-5 space-y-4">
+        <form onSubmit={onSubmit} noValidate className="mt-2 space-y-4">
           <label className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
             Website
             <input
@@ -198,12 +172,12 @@ export function UpdateForm({ place, onClose }: UpdateFormProps) {
             >
               {status === 'submitting' ? 'Sending…' : status === 'success' ? 'Submitted' : 'Submit'}
             </Button>
-            <Button type="button" variant="secondary" onClick={onClose}>
+            <Button type="button" variant="secondary" onClick={() => onOpenChange(false)}>
               Cancel
             </Button>
           </div>
         </form>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   )
 }

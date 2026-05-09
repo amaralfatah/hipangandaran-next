@@ -176,20 +176,22 @@ export default async function ArticlePage({ params }: PageProps) {
             {related.map((r) => (
               <li key={r.slug}>
                 <Link href={`/guides/${r.slug}`} className="block h-full">
-                  <Card as="article" className="flex h-full flex-col">
-                    <CardHeader>
-                      <Badge variant="surf">
-                        {categoryLabels[r.frontmatter.category] ?? r.frontmatter.category}
-                      </Badge>
-                      <CardTitle>{r.frontmatter.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>{r.frontmatter.description}</CardContent>
-                    <CardFooter>
-                      <span>By {r.frontmatter.author}</span>
-                      <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
-                        {r.frontmatter.readingTime} min
-                      </span>
-                    </CardFooter>
+                  <Card asChild className="flex h-full flex-col">
+                    <article>
+                      <CardHeader>
+                        <Badge variant="surf">
+                          {categoryLabels[r.frontmatter.category] ?? r.frontmatter.category}
+                        </Badge>
+                        <CardTitle>{r.frontmatter.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>{r.frontmatter.description}</CardContent>
+                      <CardFooter>
+                        <span>By {r.frontmatter.author}</span>
+                        <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
+                          {r.frontmatter.readingTime} min
+                        </span>
+                      </CardFooter>
+                    </article>
                   </Card>
                 </Link>
               </li>

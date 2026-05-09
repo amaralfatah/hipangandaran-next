@@ -43,7 +43,8 @@ export async function LatestGuides() {
           return (
             <li key={slug}>
               <Link href={`/guides/${slug}`} className="block h-full">
-                <Card as="article" className="flex h-full flex-col">
+                <Card asChild className="flex h-full flex-col">
+                  <article>
                   <CardHeader>
                     <Badge variant="surf">
                       {categoryLabels[frontmatter.category] ?? frontmatter.category}
@@ -57,6 +58,7 @@ export async function LatestGuides() {
                       {frontmatter.readingTime} min · {frontmatter.publishedAt}
                     </span>
                   </CardFooter>
+                  </article>
                 </Card>
               </Link>
             </li>

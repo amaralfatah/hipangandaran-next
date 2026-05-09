@@ -60,12 +60,11 @@ export function CafeListItem({ cafe }: { cafe: Cafe }) {
         )}
       </div>
 
-      {reportOpen && (
-        <UpdateForm
-          place={{ id: cafe.id, type: 'cafe', name: cafe.name }}
-          onClose={() => setReportOpen(false)}
-        />
-      )}
+      <UpdateForm
+        place={{ id: cafe.id, type: 'cafe', name: cafe.name }}
+        open={reportOpen}
+        onOpenChange={setReportOpen}
+      />
     </article>
   )
 }

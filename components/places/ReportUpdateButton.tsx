@@ -19,7 +19,7 @@ export function ReportUpdateButton({
       >
         Report update
       </button>
-      {open && <UpdateForm place={place} onClose={() => setOpen(false)} />}
+      <UpdateForm place={place} open={open} onOpenChange={setOpen} />
     </>
   )
 }

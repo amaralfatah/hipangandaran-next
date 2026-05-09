@@ -13,6 +13,13 @@ import {
   type OriginCity,
 } from '@/lib/calculator-data'
 import { Button } from '@/components/ui/Button'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/shadcn/select'
 
 // ─── Static option arrays ───────────────────────────────────────────────────
 
@@ -404,30 +411,21 @@ export function CostCalculator() {
           <legend className="text-charcoal/75 mb-2 text-xs font-semibold tracking-widest uppercase">
             Traveling from
           </legend>
-          <div className="relative">
-            <select
-              id="origin-select"
-              value={inputs.origin}
-              onChange={(e) => patch('origin', e.target.value as OriginCity)}
-              className={cn(
-                'border-charcoal/20 bg-cream text-charcoal h-11 w-full appearance-none rounded-full border px-5 pr-10 text-sm',
-                'focus-visible:border-ocean focus-visible:ring-ocean/40 focus-visible:ring-2 focus-visible:outline-none',
-              )}
-              aria-label="Origin city"
-            >
+          <Select
+            value={inputs.origin}
+            onValueChange={(v) => patch('origin', v as OriginCity)}
+          >
+            <SelectTrigger id="origin-select" aria-label="Origin city">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
               {ORIGIN_OPTIONS.map((o) => (
-                <option key={o.value} value={o.value}>
+                <SelectItem key={o.value} value={o.value}>
                   {o.label}
-                </option>
+                </SelectItem>
               ))}
-            </select>
-            <span
-              aria-hidden="true"
-              className="text-charcoal/50 pointer-events-none absolute top-1/2 right-4 -translate-y-1/2"
-            >
-              ▾
-            </span>
-          </div>
+            </SelectContent>
+          </Select>
         </fieldset>
 
         <fieldset>
