@@ -10,14 +10,14 @@ export default async function CafesPage() {
 
   return (
     <div>
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-baseline gap-3">
           <h1 className="text-xl font-semibold text-gray-900">Cafes</h1>
           <span className="text-sm text-gray-500">{cafes?.length ?? 0} total</span>
         </div>
         <Link
           href="/admin/cafes/new"
-          className="rounded bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-700"
+          className="inline-flex w-full justify-center rounded bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-700 sm:w-auto"
         >
           + Add Cafe
         </Link>
@@ -26,8 +26,8 @@ export default async function CafesPage() {
       {!cafes || cafes.length === 0 ? (
         <p className="text-sm text-gray-500">No cafes yet.</p>
       ) : (
-        <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+          <table className="w-full min-w-[640px] text-sm">
             <thead className="border-b border-gray-200 bg-gray-50">
               <tr>
                 <th className="px-4 py-3 text-left text-xs font-medium tracking-wide text-gray-500 uppercase">

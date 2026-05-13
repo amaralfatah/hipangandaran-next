@@ -126,7 +126,7 @@ export function AccommodationForm({ accommodation }: { accommodation?: Row }) {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Name *">
           <input
             type="text"
@@ -147,7 +147,7 @@ export function AccommodationForm({ accommodation }: { accommodation?: Row }) {
         </Field>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Type *">
           <select
             value={form.type}
@@ -191,7 +191,7 @@ export function AccommodationForm({ accommodation }: { accommodation?: Row }) {
         </select>
       </Field>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Field label="Price Min (USD) *">
           <input
             type="number"
@@ -223,7 +223,7 @@ export function AccommodationForm({ accommodation }: { accommodation?: Row }) {
         </Field>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Distance to Beach (m) *">
           <input
             type="number"

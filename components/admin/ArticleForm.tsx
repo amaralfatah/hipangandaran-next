@@ -115,7 +115,7 @@ export function ArticleForm({ initialSlug, initialFrontmatter, initialContent }:
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Title * (10–100 chars)">
           <input
             type="text"
@@ -151,7 +151,7 @@ export function ArticleForm({ initialSlug, initialFrontmatter, initialContent }:
         />
       </Field>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Field label="Category *">
           <select
             value={form.category}
@@ -193,7 +193,7 @@ export function ArticleForm({ initialSlug, initialFrontmatter, initialContent }:
         </Field>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Published At *">
           <input
             type="date"
@@ -214,7 +214,7 @@ export function ArticleForm({ initialSlug, initialFrontmatter, initialContent }:
         </Field>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Featured Image * (starts with /)">
           <input
             type="text"

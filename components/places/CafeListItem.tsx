@@ -1,17 +1,19 @@
 'use client'
 
 import { useState } from 'react'
+import { Plug, PlugZap } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { WifiBar } from './WifiBar'
 import { UpdateForm } from './UpdateForm'
 import { formatTimeRange, type Cafe } from '@/lib/places'
 import { LOCATION_LABELS } from '@/types/filters'
-import { formatVerificationDate } from '@/lib/utils'
+import { cn, formatVerificationDate } from '@/lib/utils'
 
 const PRICE_LABEL = { budget: '$', mid: '$$', upscale: '$$$' } as const
 
 export function CafeListItem({ cafe }: { cafe: Cafe }) {
   const [reportOpen, setReportOpen] = useState(false)
+  const hasWifiData = cafe.wifi_speed_mbps != null && cafe.wifi_speed_mbps > 0
 
   return (
     <article className="border-charcoal/10 bg-cream rounded-2xl border p-5 shadow-[0_1px_2px_rgba(28,28,30,0.04)] transition-shadow hover:shadow-[0_4px_16px_rgba(28,28,30,0.06)]">
@@ -26,9 +28,19 @@ export function CafeListItem({ cafe }: { cafe: Cafe }) {
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
-        <WifiBar mbps={cafe.wifi_speed_mbps} />
-        <span className="text-charcoal/75 font-[family-name:var(--font-mono)]">
-          {cafe.power_outlets ? '🔌 Outlets' : '✗ No outlets'}
+        {hasWifiData && <WifiBar mbps={cafe.wifi_speed_mbps} />}
+        <span
+          className={cn(
+            'inline-flex items-center gap-1 font-[family-name:var(--font-mono)]',
+            cafe.power_outlets ? 'text-charcoal/75' : 'text-charcoal/45',
+          )}
+        >
+          {cafe.power_outlets ? (
+            <PlugZap aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.75} />
+          ) : (
+            <Plug aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.75} />
+          )}
+          {cafe.power_outlets ? 'Outlets' : 'No outlets'}
         </span>
         <span className="text-charcoal/75 font-[family-name:var(--font-mono)]">
           {formatTimeRange(cafe.opens_at, cafe.closes_at)}

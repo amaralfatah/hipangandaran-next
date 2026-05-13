@@ -22,6 +22,15 @@ interface GuidesListProps {
 
 const ALL = 'all'
 
+const categoryBadgeVariant: Record<string, 'surf' | 'nomad' | 'cafe' | 'default'> = {
+  activities: 'surf',
+  nomad: 'nomad',
+  food: 'cafe',
+  transport: 'default',
+  accommodation: 'default',
+  planning: 'default',
+}
+
 export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
   const [query, setQuery] = useState('')
   const [category, setCategory] = useState<string>(ALL)
@@ -110,7 +119,7 @@ export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
                 <Card asChild className="flex h-full flex-col">
                   <article>
                     <CardHeader>
-                      <Badge variant="surf">
+                      <Badge variant={categoryBadgeVariant[frontmatter.category] ?? 'default'}>
                         {categoryLabels[frontmatter.category] ?? frontmatter.category}
                       </Badge>
                       <CardTitle>{frontmatter.title}</CardTitle>

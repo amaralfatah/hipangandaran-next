@@ -13,7 +13,7 @@ export default async function SubscribersPage() {
 
   return (
     <div>
-      <div className="mb-6 flex items-baseline gap-3">
+      <div className="mb-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <h1 className="text-xl font-semibold text-gray-900">Subscribers</h1>
         <span className="text-sm text-gray-500">
           {active.length} active / {total} total
@@ -23,8 +23,8 @@ export default async function SubscribersPage() {
       {total === 0 ? (
         <p className="text-sm text-gray-500">No subscribers yet.</p>
       ) : (
-        <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+          <table className="w-full min-w-[640px] text-sm">
             <thead className="border-b border-gray-200 bg-gray-50">
               <tr>
                 <th className="px-4 py-3 text-left text-xs font-medium tracking-wide text-gray-500 uppercase">

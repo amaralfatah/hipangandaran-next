@@ -10,9 +10,9 @@ const bucketLabel = {
 
 const bucketColor = {
   none: 'bg-charcoal/15',
-  slow: 'bg-warning',
-  ok: 'bg-ocean',
-  fast: 'bg-forest',
+  slow: 'bg-wifi-slow',
+  ok: 'bg-wifi-medium',
+  fast: 'bg-wifi-fast',
 }
 
 export function WifiBar({ mbps, className }: { mbps: number | null; className?: string }) {

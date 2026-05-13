@@ -119,7 +119,7 @@ export function CafeForm({ cafe }: { cafe?: Row }) {
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Name *">
           <input
             type="text"
@@ -140,7 +140,7 @@ export function CafeForm({ cafe }: { cafe?: Row }) {
         </Field>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Location Area *">
           <select
             value={form.location_area}
@@ -172,7 +172,7 @@ export function CafeForm({ cafe }: { cafe?: Row }) {
         </Field>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Field label="WiFi Speed (Mbps)">
           <input
             type="number"
@@ -210,7 +210,7 @@ export function CafeForm({ cafe }: { cafe?: Row }) {
         Power Outlets
       </label>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Field label="Instagram URL">
           <input
             type="url"
@@ -229,7 +229,7 @@ export function CafeForm({ cafe }: { cafe?: Row }) {
         </Field>
       </div>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Field label="Latitude">
           <input
             type="number"

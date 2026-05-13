@@ -13,6 +13,15 @@ const categoryLabels: Record<string, string> = {
   planning: 'Planning',
 }
 
+const categoryBadgeVariant: Record<string, 'surf' | 'nomad' | 'cafe' | 'default'> = {
+  activities: 'surf',
+  nomad: 'nomad',
+  food: 'cafe',
+  transport: 'default',
+  accommodation: 'default',
+  planning: 'default',
+}
+
 export async function LatestGuides() {
   const articles = await getAllArticles()
   const latest = articles.slice(0, 3)
@@ -46,7 +55,7 @@ export async function LatestGuides() {
               <article className="h-full">
                 <Card className="group focus-within:ring-ring relative flex h-full flex-col transition-shadow focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-md">
                   <CardHeader>
-                    <Badge variant="surf">
+                    <Badge variant={categoryBadgeVariant[frontmatter.category] ?? 'default'}>
                       {categoryLabels[frontmatter.category] ?? frontmatter.category}
                     </Badge>
                     <CardTitle>

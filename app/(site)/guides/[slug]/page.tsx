@@ -23,6 +23,15 @@ const categoryLabels: Record<string, string> = {
   planning: 'Planning',
 }
 
+const categoryBadgeVariant: Record<string, 'surf' | 'nomad' | 'cafe' | 'default'> = {
+  activities: 'surf',
+  nomad: 'nomad',
+  food: 'cafe',
+  transport: 'default',
+  accommodation: 'default',
+  planning: 'default',
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>
 }
@@ -103,7 +112,9 @@ export default async function ArticlePage({ params }: PageProps) {
       />
 
       <header className="mt-6 max-w-3xl">
-        <Badge variant="surf">{categoryLabel}</Badge>
+        <Badge variant={categoryBadgeVariant[frontmatter.category] ?? 'default'}>
+          {categoryLabel}
+        </Badge>
         <h1 className="text-charcoal mt-4 font-[family-name:var(--font-display)] text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
           {frontmatter.title}
         </h1>
@@ -179,7 +190,7 @@ export default async function ArticlePage({ params }: PageProps) {
                   <Card asChild className="flex h-full flex-col">
                     <article>
                       <CardHeader>
-                        <Badge variant="surf">
+                        <Badge variant={categoryBadgeVariant[r.frontmatter.category] ?? 'default'}>
                           {categoryLabels[r.frontmatter.category] ?? r.frontmatter.category}
                         </Badge>
                         <CardTitle>{r.frontmatter.title}</CardTitle>
