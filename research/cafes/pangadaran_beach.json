@@ -1,0 +1,1055 @@
+{
+  "area": "pangandaran_beach",
+  "searched_at": "2026-05-13",
+  "total_found": 23,
+  "cafes": [
+    {
+      "name": "Hello Beach Coffee and Eatery",
+      "slug": "hello-beach-coffee-and-eatery",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "08:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/hellobeachcoffee/](https://www.instagram.com/hellobeachcoffee/)",
+      "google_maps_url": "[https://www.google.com/maps/place/Hello+Beach+Coffee+and+Eatery/@-7.690204,108.657425,17z](https://www.google.com/maps/place/Hello+Beach+Coffee+and+Eatery/@-7.690204,108.657425,17z)",
+      "latitude": -7.690204,
+      "longitude": 108.657425,
+      "evidence": {
+        "opens_at": {
+          "source": "Wanderlog Google listing summary and Instagram profile snippet",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "Wanderlog Google listing summary and Instagram profile snippet",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Cafe latte and coffee menu evidence found; exact menu prices not fully published, but local cafe category suggests Rp25,000-Rp50,000 range.",
+          "source": "Wanderlog reviews and Google/Instagram snippets"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.690204,108.657425"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": ["Saturday hours may differ; Wanderlog shows Saturday closes at 00:00"]
+    },
+    {
+      "name": "Nourite Coffee & Eatery",
+      "slug": "nourite-coffee-eatery",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "23:00",
+      "price_range": "budget",
+      "instagram_url": "[https://www.instagram.com/nouritecoffee/](https://www.instagram.com/nouritecoffee/)",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "GotoWhere listing: Mon-Fri 10:00-23:00, Sat-Sun 08:00-23:00",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "GotoWhere listing: Mon-Fri 10:00-23:00, Sat-Sun 08:00-23:00",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "CariKuliner menu lists espresso around Rp18,000, Americano around Rp20,000, and latte/cappuccino around Rp25,000; most basic coffee falls under budget.",
+          "source": "CariKuliner menu and GotoWhere price range Rp25,000-Rp50,000"
+        },
+        "power_outlets": {
+          "quote": "Good for working on laptop",
+          "source": "GotoWhere amenities"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "coordinates"],
+      "red_flags": ["no valid place listing"]
+    },
+    {
+      "name": "badiakopi",
+      "slug": "badiakopi",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/badia.kopi/](https://www.instagram.com/badia.kopi/)",
+      "google_maps_url": "[https://www.google.com/maps/place/badiakopi/@-7.69145,108.6578505,17z](https://www.google.com/maps/place/badiakopi/@-7.69145,108.6578505,17z)",
+      "latitude": -7.69145,
+      "longitude": 108.6578505,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Coffee shop with pizza/food menu; exact per-cup coffee price not found, so mid is inferred from modern cafe positioning.",
+          "source": "TempatWisataSeru and Radartegal cafe recommendation"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.69145,108.6578505"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": []
+    },
+    {
+      "name": "Overtime Coffee",
+      "slug": "overtime-coffee",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/overtime.ot/](https://www.instagram.com/overtime.ot/)",
+      "google_maps_url": "[https://www.google.com/maps/place/Overtime+Coffee+Pangandaran/@-7.6840766,108.624815,17z](https://www.google.com/maps/place/Overtime+Coffee+Pangandaran/@-7.6840766,108.624815,17z)",
+      "latitude": -7.6840766,
+      "longitude": 108.624815,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Modern coffee shop in Kampung Turis with beach view; exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru, MyPangandaran, and Grand Aquarium Hotel recommendations"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6840766,108.624815"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": [
+        "hours conflict across local sources; another local section says open from 15:00 until midnight"
+      ]
+    },
+    {
+      "name": "MORGAN Seafood Pangandaran",
+      "slug": "morgan-seafood",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/morgan.seafood.pangandaran/](https://www.instagram.com/morgan.seafood.pangandaran/)",
+      "google_maps_url": "[https://www.google.com/maps/place/MORGAN+Seafood+Pangandaran/@-7.6845305,108.6208562,17z](https://www.google.com/maps/place/MORGAN+Seafood+Pangandaran/@-7.6845305,108.6208562,17z)",
+      "latitude": -7.6845305,
+      "longitude": 108.6208562,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Directory mentions coffee and non-coffee menu; seafood positioning may raise meal spend, but coffee likely mid range.",
+          "source": "TempatWisataSeru and Grand Aquarium Hotel recommendations"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6845305,108.6208562"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": ["seafood and cafe hybrid; verify digital-nomad suitability before publishing"]
+    },
+    {
+      "name": "Bamboo Beach Bar Pangandaran",
+      "slug": "bamboo-beach-bar",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "08:00",
+      "closes_at": "03:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/bamboocafe_pangandaran/](https://www.instagram.com/bamboocafe_pangandaran/)",
+      "google_maps_url": "[https://www.google.com/maps/place/Bamboo+Beach+Bar+Pangandaran/@-7.6843997,108.6231033,17z](https://www.google.com/maps/place/Bamboo+Beach+Bar+Pangandaran/@-7.6843997,108.6231033,17z)",
+      "latitude": -7.6843997,
+      "longitude": 108.6231033,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "TripAdvisor lists $$-$$$ for the venue, but coffee/tea drinks are present; per-cup coffee price not found.",
+          "source": "TripAdvisor and TempatWisataSeru"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6843997,108.6231033"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": [
+        "TripAdvisor review activity appears stale; last visible reviews are older than 18 months",
+        "bar and cafe hybrid; verify daytime work suitability"
+      ]
+    },
+    {
+      "name": "Ahlen Resto Cafe Pangandaran",
+      "slug": "ahlen-resto-cafe",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "01:00",
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Ahlen+Resto+Cafe+Pangandaran/@-7.692012,108.65882,17z](https://www.google.com/maps/place/Ahlen+Resto+Cafe+Pangandaran/@-7.692012,108.65882,17z)",
+      "latitude": -7.692012,
+      "longitude": 108.65882,
+      "evidence": {
+        "opens_at": {
+          "source": "TripAdvisor listing hours table",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TripAdvisor listing hours table; weekend may close at 02:00",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "TripAdvisor lists price category '$', which indicates budget.",
+          "source": "TripAdvisor Ahlen Resto Cafe Pangandaran"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "TripAdvisor lists Free Wi-Fi, but speed not published"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.692012,108.65882"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "instagram_url"],
+      "red_flags": [
+        "TripAdvisor review activity appears stale; last visible reviews are older than 18 months"
+      ]
+    },
+    {
+      "name": "Litera Coffee & Library",
+      "slug": "litera-coffee-library",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "mid",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "Coffee/library cafe concept with work-friendly facilities; exact menu price not found.",
+          "source": "Kabar Pangandaran and Grand Aquarium Hotel recommendation"
+        },
+        "power_outlets": {
+          "quote": "Comfortable place to work with library and cafe concept",
+          "source": "Kabar Pangandaran article"
+        },
+        "wifi_speed_mbps": {
+          "source": "Kabar Pangandaran mentions free Wi-Fi, but speed not published"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "instagram_url",
+        "coordinates"
+      ],
+      "red_flags": ["no valid place listing"]
+    },
+    {
+      "name": "Lacultura Koffie Bar & Supply",
+      "slug": "lacultura-koffie-bar-supply",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "00:00",
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Lacultura+Koffie+Bar+%26+Supply/@-7.6963058,108.6543248,17z](https://www.google.com/maps/place/Lacultura+Koffie+Bar+%26+Supply/@-7.6963058,108.6543248,17z)",
+      "latitude": -7.6963058,
+      "longitude": 108.6543248,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Local directory describes it as wallet-friendly, but exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6963058,108.6543248"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "instagram_url"],
+      "red_flags": []
+    },
+    {
+      "name": "KOKYO by Sjahtra",
+      "slug": "kokyo-by-sjahtra",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "08:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/kokyo.co/](https://www.instagram.com/kokyo.co/)",
+      "google_maps_url": "[https://www.google.com/maps/place/KOKYO+by+Sjahtra/@-7.6931611,108.6527333,17z](https://www.google.com/maps/place/KOKYO+by+Sjahtra/@-7.6931611,108.6527333,17z)",
+      "latitude": -7.6931611,
+      "longitude": 108.6527333,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Local social source for Kokyo coffee mentions Rp25,000-Rp30,000 range.",
+          "source": "Local social-search snippet and TempatWisataSeru"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6931611,108.6527333"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets"],
+      "red_flags": []
+    },
+    {
+      "name": "Bumi Kaula Pangandaran",
+      "slug": "bumi-kaula",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "22:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/bumikaula/](https://www.instagram.com/bumikaula/)",
+      "google_maps_url": "[https://www.google.com/maps/place/Bumi+Kaula+Pangandaran/@-7.6929141,108.6545316,17z](https://www.google.com/maps/place/Bumi+Kaula+Pangandaran/@-7.6929141,108.6545316,17z)",
+      "latitude": -7.6929141,
+      "longitude": 108.6545316,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Coffee menu found, but exact per-cup coffee price not found; modern cafe positioning suggests mid range.",
+          "source": "TempatWisataSeru and Grand Aquarium Hotel recommendation"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6929141,108.6545316"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": [
+        "entity ambiguity: another recommendation source refers to Bumi Kaula Coffee in Batu Hiu; verify exact branch before publishing"
+      ]
+    },
+    {
+      "name": "Tepi Pangandaran",
+      "slug": "tepi",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": "22:00",
+      "price_range": "budget",
+      "instagram_url": "[https://www.instagram.com/tepi.pangandaran/](https://www.instagram.com/tepi.pangandaran/)",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "Maptons/Yandex-style listing snippet says open until 22:00",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "Social snippet mentions Seasalt Caramel Latte Rp22,000, which is budget by coffee-cup threshold.",
+          "source": "Lemon8/social-search snippet"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "opens_at", "coordinates"],
+      "red_flags": ["no valid place listing"]
+    },
+    {
+      "name": "MidSummer by.MS",
+      "slug": "midsummer-by-ms",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "budget",
+      "instagram_url": "[https://www.instagram.com/midsummer.coffee/](https://www.instagram.com/midsummer.coffee/)",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "Local social post says menu starts from Rp18,000, which is budget.",
+          "source": "Lemon8/social-search snippet and Radartegal recommendation"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": ["no valid place listing"]
+    },
+    {
+      "name": "Nyiur Coffee & Eatery",
+      "slug": "nyiur-coffee-eatery",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "22:00",
+      "price_range": "budget",
+      "instagram_url": "[https://www.instagram.com/nyiurcoffeeeatery/](https://www.instagram.com/nyiurcoffeeeatery/)",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "Instagram profile/location snippet",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "Instagram profile/location snippet",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Social snippet describes affordable prices, but exact coffee price was not found.",
+          "source": "Instagram/social-search snippets"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "coordinates"],
+      "red_flags": ["no valid place listing"]
+    },
+    {
+      "name": "Sunset Corner urban cafe",
+      "slug": "sunset-corner-urban-cafe",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "12:00",
+      "closes_at": "22:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/sunsetcornerurban/](https://www.instagram.com/sunsetcornerurban/)",
+      "google_maps_url": "[https://www.google.com/maps/place/SUNSET+CORNER+urban+cafe/@-7.6896742,108.6461881,17z](https://www.google.com/maps/place/SUNSET+CORNER+urban+cafe/@-7.6896742,108.6461881,17z)",
+      "latitude": -7.6896742,
+      "longitude": 108.6461881,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Directory mentions coffee menu but exact per-cup price not found; modern cafe positioning suggests mid range.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6896742,108.6461881"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": []
+    },
+    {
+      "name": "Captain Cafe And Bar",
+      "slug": "captain-cafe-and-bar",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "12:00",
+      "closes_at": "00:00",
+      "price_range": "mid",
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Captain+Cafe+And+Bar/@-7.6919818,108.6490414,17z](https://www.google.com/maps/place/Captain+Cafe+And+Bar/@-7.6919818,108.6490414,17z)",
+      "latitude": -7.6919818,
+      "longitude": 108.6490414,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Cafe and bar concept; exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6919818,108.6490414"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "instagram_url"],
+      "red_flags": ["bar and cafe hybrid; verify daytime work suitability"]
+    },
+    {
+      "name": "TEES COFFEE X BATMANS STEAK",
+      "slug": "tees-coffee-x-batmans-steak",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "11:00",
+      "closes_at": "21:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/teescoffeexsteakbatmans/](https://www.instagram.com/teescoffeexsteakbatmans/)",
+      "google_maps_url": "[https://www.google.com/maps/place/TEES+COFFEE+X+BATMANS+STEAK/@-7.6805039,108.6457662,17z](https://www.google.com/maps/place/TEES+COFFEE+X+BATMANS+STEAK/@-7.6805039,108.6457662,17z)",
+      "latitude": -7.6805039,
+      "longitude": 108.6457662,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Coffee is a primary concept but combined with steak menu; exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6805039,108.6457662"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": []
+    },
+    {
+      "name": "Warunk Rock N Roll 78 Pangandaran",
+      "slug": "warunk-rock-n-roll-78",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "12:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/warunk_rocknroll78/](https://www.instagram.com/warunk_rocknroll78/)",
+      "google_maps_url": "[https://www.google.com/maps/place/Warunk+Rock+N+Roll+78+Pangandaran/@-7.6941854,108.6578241,17z](https://www.google.com/maps/place/Warunk+Rock+N+Roll+78+Pangandaran/@-7.6941854,108.6578241,17z)",
+      "latitude": -7.6941854,
+      "longitude": 108.6578241,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Coffee and live-music cafe concept found; exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6941854,108.6578241"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": ["live music venue; verify quiet work suitability"]
+    },
+    {
+      "name": "Madys Gelato",
+      "slug": "madys-gelato",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:30",
+      "closes_at": "22:00",
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Madys+Gelato/@-7.7039323,108.6567376,17z](https://www.google.com/maps/place/Madys+Gelato/@-7.7039323,108.6567376,17z)",
+      "latitude": -7.7039323,
+      "longitude": 108.6567376,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Gelato and drink cafe with coffee; exact coffee price not found, likely budget-to-mid.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.7039323,108.6567376"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "instagram_url"],
+      "red_flags": [
+        "gelato-first venue; verify seating and work suitability before publishing for digital nomads"
+      ]
+    },
+    {
+      "name": "Glory Beach Cafe & Restaurant",
+      "slug": "glory-beach-cafe-restaurant",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "00:00",
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Glory+Beach+Cafe+%26+Restaurant/@-7.6887838,108.6439239,17z](https://www.google.com/maps/place/Glory+Beach+Cafe+%26+Restaurant/@-7.6887838,108.6439239,17z)",
+      "latitude": -7.6887838,
+      "longitude": 108.6439239,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "TripAdvisor lists price category '$', but recent price evidence for coffee was not found.",
+          "source": "TripAdvisor and TempatWisataSeru"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6887838,108.6439239"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "instagram_url"],
+      "red_flags": [
+        "TripAdvisor review activity appears stale; last visible reviews are older than 18 months"
+      ]
+    },
+    {
+      "name": "A&R Cafe",
+      "slug": "ar-cafe",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "[https://www.instagram.com/ar.restocafe/](https://www.instagram.com/ar.restocafe/)",
+      "google_maps_url": "[https://www.google.com/maps/place/A%26R+Cafe/@-7.699941,108.6578632,17z](https://www.google.com/maps/place/A%26R+Cafe/@-7.699941,108.6578632,17z)",
+      "latitude": -7.699941,
+      "longitude": 108.6578632,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "medium"
+        },
+        "price_range": {
+          "reasoning": "Cafe and resto with sea-view seating; exact per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.699941,108.6578632"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range"],
+      "red_flags": []
+    },
+    {
+      "name": "Wagoon Coffee",
+      "slug": "wagoon-coffee",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "TripAdvisor lists price category '$', but current operating evidence is weak.",
+          "source": "TripAdvisor Wagoon Coffee listing"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "instagram_url",
+        "coordinates"
+      ],
+      "red_flags": [
+        "no valid place listing",
+        "TripAdvisor review activity appears stale; last visible reviews are older than 18 months"
+      ]
+    },
+    {
+      "name": "Hidden tropical vibes tempat nongkrong asik pangandaran",
+      "slug": "hidden-tropical-vibes-tempat-nongkrong-asik",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "22:00",
+      "price_range": null,
+      "instagram_url": null,
+      "google_maps_url": "[https://www.google.com/maps/place/Hidden+tropical+vibes+tempat+nongkrong+asik+pangandaran/@-7.6991317,108.6578623,17z](https://www.google.com/maps/place/Hidden+tropical+vibes+tempat+nongkrong+asik+pangandaran/@-7.6991317,108.6578623,17z)",
+      "latitude": -7.6991317,
+      "longitude": 108.6578623,
+      "evidence": {
+        "opens_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "TempatWisataSeru cafe directory",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "Cafe/nongkrong evidence found, but menu and per-cup coffee price not found.",
+          "source": "TempatWisataSeru cafe directory"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "Google Maps place coordinate: -7.6991317,108.6578623"
+        }
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "instagram_url"],
+      "red_flags": ["single-source, low confidence — verify before publishing"]
+    },
+    {
+      "name": "Beachside Haven",
+      "slug": "beachside-haven",
+      "location_area": "pangandaran_beach",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": null,
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "evidence": {
+        "opens_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "closes_at": {
+          "source": "not found",
+          "confidence": "low"
+        },
+        "price_range": {
+          "reasoning": "Cafe recommendation found near beach, but menu and price evidence not found.",
+          "source": "Radartegal cafe recommendation"
+        },
+        "power_outlets": {
+          "quote": "",
+          "source": "not found"
+        },
+        "wifi_speed_mbps": {
+          "source": "not found"
+        },
+        "coordinates": {
+          "source": "not found"
+        }
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "price_range",
+        "instagram_url",
+        "coordinates"
+      ],
+      "red_flags": [
+        "no valid place listing",
+        "single-source, low confidence — verify before publishing"
+      ]
+    }
+  ],
+  "summary": {
+    "candidates_skipped": [
+      {
+        "name": "Green Garden Cafe Paganderan",
+        "reason": "Seafood/restaurant focus; no clear cafe, coffee, Wi-Fi, or work-friendly evidence."
+      },
+      {
+        "name": "Kedai Kaya Rasa",
+        "reason": "Nongkrong/food venue found, but no strong coffee shop or digital-nomad cafe evidence."
+      },
+      {
+        "name": "Big Burger Cafe",
+        "reason": "Burger-first venue; no strong coffee/Wi-Fi evidence."
+      },
+      {
+        "name": "Ocean Cafe",
+        "reason": "Rooftop cafe mention found, but no stable independent place listing, coordinates, hours, or review evidence."
+      },
+      {
+        "name": "Puppy Cafe and Resto",
+        "reason": "Name and listing evidence uncertain; no valid place listing or clear current operating evidence."
+      },
+      {
+        "name": "PAPI Café & Resto",
+        "reason": "Weak social-only evidence and unclear whether it is a cafe directory candidate for Pangandaran Beach."
+      },
+      {
+        "name": "Javanila Resto & Cafe",
+        "reason": "Local directory marks the place as permanently closed."
+      },
+      {
+        "name": "Lagoon Beer House",
+        "reason": "Local directory marks the place as permanently closed."
+      },
+      {
+        "name": "Pasanggrahan",
+        "reason": "Local directory marks the place as permanently closed."
+      }
+    ],
+    "coverage_notes": "Search coverage included Google Maps-style place results, Google web queries for best cafe, digital nomad cafe, and Wi-Fi cafe Pangandaran Beach, Instagram hashtag/location-style results, and Tripadvisor Coffee & Tea/Cafe listings. Stronger evidence was found for Hello Beach Coffee and Eatery, Nourite Coffee & Eatery, badiakopi, Overtime Coffee, MORGAN Seafood Pangandaran, Bamboo Beach Bar Pangandaran, Ahlen Resto Cafe Pangandaran, Litera Coffee & Library, Lacultura Koffie Bar & Supply, KOKYO by Sjahtra, and Bumi Kaula Pangandaran. Several entries remain field-survey candidates because Wi-Fi speed, power outlets, exact coffee price, or valid Google Maps coordinates were not publicly verifiable."
+  }
+}

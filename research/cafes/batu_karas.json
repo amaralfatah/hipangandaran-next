@@ -1,0 +1,806 @@
+{
+  "generated_at": "2026-05-13T07:22:42.063Z",
+  "source_files": [
+    {
+      "file": "1.json",
+      "count": 6,
+      "kept": 5,
+      "dropped": 1
+    },
+    {
+      "file": "2.json",
+      "count": 5,
+      "kept": 5,
+      "dropped": 0
+    },
+    {
+      "file": "3.json",
+      "count": 7,
+      "kept": 7,
+      "dropped": 0
+    },
+    {
+      "file": "4.json",
+      "count": 5,
+      "kept": 5,
+      "dropped": 0
+    },
+    {
+      "file": "5.json",
+      "count": 14,
+      "kept": 14,
+      "dropped": 0
+    }
+  ],
+  "total_unique_cafes": 20,
+  "high_confidence": 8,
+  "single_source": 12,
+  "cafes": [
+    {
+      "name": "House of Sawah Batukaras",
+      "slug": "house-of-sawah-batukaras",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "21:00",
+      "price_range": "mid",
+      "instagram_url": "https://www.instagram.com/houseofsawah",
+      "google_maps_url": "https://www.google.com/maps/place/House+of+Sawah/@-7.7412852,108.4962255,17z/",
+      "latitude": -7.7412852,
+      "longitude": 108.4962255,
+      "_confidence": {
+        "appears_in": ["1.json", "2.json", "3.json", "4.json", "5.json"],
+        "cross_source_count": 5,
+        "opens_at": 3,
+        "closes_at": 3,
+        "price_range": 0,
+        "coords_from": "2.json"
+      },
+      "_evidence": {
+        "opens_at_source": "https://www.houseofsawah.com/restaurant/",
+        "closes_at_source": "https://www.houseofsawah.com/restaurant/",
+        "price_range_source": "https://www.lemon8-app.com/@kazmirow/7531283113579201044?region=id",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": []
+    },
+    {
+      "name": "Salt Cafe",
+      "slug": "salt-cafe",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "22:00",
+      "price_range": "mid",
+      "instagram_url": "https://www.instagram.com/saltcafe_batukaras",
+      "google_maps_url": "https://www.google.com/maps/place/Salt+Cafe/@-7.7478,108.5028,17z/",
+      "latitude": -7.7478,
+      "longitude": 108.5028,
+      "_confidence": {
+        "appears_in": ["1.json", "2.json", "3.json", "4.json", "5.json"],
+        "cross_source_count": 5,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": "2.json"
+      },
+      "_evidence": {
+        "opens_at_source": "https://www.adventuresofjellie.com/indonesia/complete-batukaras-guide",
+        "closes_at_source": "https://www.adventuresofjellie.com/indonesia/complete-batukaras-guide",
+        "price_range_source": "https://www.instagram.com/reel/DDHIbZHzgbk/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "instagram_url",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": []
+    },
+    {
+      "name": "Kedai Mini Resto Rice Field",
+      "slug": "kedai-mini-resto-rice-field",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "06:00",
+      "closes_at": "22:00",
+      "price_range": "mid",
+      "instagram_url": null,
+      "google_maps_url": "https://www.google.com/maps/place/Kedai+Mini+Resto+Rice+Field/@-7.741355,108.496155,17z/",
+      "latitude": -7.741355,
+      "longitude": 108.496155,
+      "_confidence": {
+        "appears_in": ["2.json", "4.json", "5.json"],
+        "cross_source_count": 3,
+        "opens_at": 3,
+        "closes_at": 3,
+        "price_range": 0,
+        "coords_from": "2.json"
+      },
+      "_evidence": {
+        "opens_at_source": "https://www.happycow.net/reviews/kedai-mini-resto-rice-field-pangandaran-380678",
+        "closes_at_source": "https://www.happycow.net/reviews/kedai-mini-resto-rice-field-pangandaran-380678",
+        "price_range_source": "https://www.lemon8-app.com/@rachmadiofficial/7549040863793086994",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "instagram_url",
+        "closes_at",
+        "price_range"
+      ],
+      "red_flags": [
+        "[5.json] Tripadvisor review activity appears stale; last visible reviews are older than 18 months",
+        "[5.json] published hours look anomalous; verify before publishing"
+      ]
+    },
+    {
+      "name": "Swell Dough",
+      "slug": "swell-dough",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "21:00",
+      "price_range": "mid",
+      "instagram_url": "https://instagram.com/swelldough",
+      "google_maps_url": "https://www.google.com/maps/place/Swell+Dough/@-7.7477544,108.4988775,17z/",
+      "latitude": -7.7477544,
+      "longitude": 108.4988775,
+      "_confidence": {
+        "appears_in": ["2.json", "4.json", "5.json"],
+        "cross_source_count": 3,
+        "opens_at": 3,
+        "closes_at": 3,
+        "price_range": 0,
+        "coords_from": "2.json"
+      },
+      "_evidence": {
+        "opens_at_source": "https://usurfbatukaras.com/where-to-eat-in-batukaras-the-best-post-surf-fuel-spots",
+        "closes_at_source": "[https://www.instagram.com/swelldough/](https://www.google.com/search?q=https://www.instagram.com/swelldough/)",
+        "price_range_source": "https://usurfbatukaras.com/where-to-eat-in-batukaras-the-best-post-surf-fuel-spots",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "price_range",
+        "instagram_url",
+        "coordinates"
+      ],
+      "red_flags": [
+        "[5.json] no valid place listing",
+        "[5.json] single-source, low confidence — verify before publishing"
+      ]
+    },
+    {
+      "name": "Hangfive Coffee and Surf",
+      "slug": "hangfive-coffee-and-surf",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "23:00",
+      "price_range": "mid",
+      "instagram_url": "https://instagram.com/hangfivecoffeeandsurf",
+      "google_maps_url": "https://www.google.com/maps/place/Hangfive+Coffee+and+Surf/@-7.74957,108.500838,17z",
+      "latitude": -7.74957,
+      "longitude": 108.500838,
+      "_confidence": {
+        "appears_in": ["3.json", "5.json"],
+        "cross_source_count": 2,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": "5.json"
+      },
+      "_evidence": {
+        "opens_at_source": "Kabar Pangandaran article for Hangfive Coffee and Surf",
+        "closes_at_source": "Kabar Pangandaran article for Hangfive Coffee and Surf",
+        "price_range_source": "https://www.instagram.com/hangfivecoffeeandsurf/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": [
+        "[5.json] hours source is older than 12 months; verify against current Google Maps before publishing"
+      ]
+    },
+    {
+      "name": "Karassan Coffee",
+      "slug": "karassan-coffee",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "22:00",
+      "price_range": "mid",
+      "instagram_url": "https://instagram.com/karassan_",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["3.json", "5.json"],
+        "cross_source_count": 2,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": "Instagram profile snippet for @karassan_",
+        "closes_at_source": "Instagram profile snippet for @karassan_",
+        "price_range_source": "https://www.instagram.com/p/DXUi6GZjwrz/?img_index=2",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": [
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing"
+      ]
+    },
+    {
+      "name": "Kedai Samboja",
+      "slug": "kedai-samboja",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "08:00",
+      "closes_at": "22:00",
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": "https://www.google.com/maps/place/Kedai+Samboja/@-7.7485,108.5025,17z/",
+      "latitude": -7.7485,
+      "longitude": 108.5025,
+      "_confidence": {
+        "appears_in": ["2.json", "4.json"],
+        "cross_source_count": 2,
+        "opens_at": 1,
+        "closes_at": 1,
+        "price_range": 0,
+        "coords_from": "2.json"
+      },
+      "_evidence": {
+        "opens_at_source": "[https://www.google.com/maps/place/Kedai+Samboja/]()",
+        "closes_at_source": "[https://www.google.com/maps/place/Kedai+Samboja/]()",
+        "price_range_source": "https://wanderlog.com/place/details/9978655/kedai-samboja",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "opens_at",
+        "closes_at",
+        "wifi_speed_mbps",
+        "power_outlets",
+        "instagram_url"
+      ],
+      "red_flags": []
+    },
+    {
+      "name": "Le Pari",
+      "slug": "le-pari",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "21:00",
+      "price_range": "mid",
+      "instagram_url": "https://instagram.com/le__pari",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["3.json", "5.json"],
+        "cross_source_count": 2,
+        "opens_at": 3,
+        "closes_at": 3,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": "https://www.tripzilla.id/kafe-aesthetic-pangandaran/22003",
+        "closes_at_source": "https://www.tripzilla.id/kafe-aesthetic-pangandaran/22003",
+        "price_range_source": "https://www.tripzilla.id/kafe-aesthetic-pangandaran/22003",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "coordinates",
+        "opens_at",
+        "closes_at",
+        "price_range"
+      ],
+      "red_flags": [
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing"
+      ]
+    },
+    {
+      "name": "Al Fresko",
+      "slug": "al-fresko",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "06:30",
+      "closes_at": "21:00",
+      "price_range": null,
+      "instagram_url": null,
+      "google_maps_url": "https://www.google.com/maps/place/Al+Fresko/@-7.750003,108.501465,17z",
+      "latitude": -7.750003,
+      "longitude": 108.501465,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 3,
+        "closes_at": 3,
+        "price_range": 0,
+        "coords_from": "5.json"
+      },
+      "_evidence": {
+        "opens_at_source": "Tripadvisor Al Fresko hours table",
+        "closes_at_source": "Tripadvisor Al Fresko hours table",
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "instagram_url"],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "[5.json] Tripadvisor review activity appears stale; last visible reviews are older than 18 months",
+        "[5.json] hotel restaurant/cafe hybrid; verify cafe suitability before publishing for digital nomads"
+      ]
+    },
+    {
+      "name": "Amelia Bakery Batu Karas",
+      "slug": "amelia-bakery-batu-karas",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "08:00",
+      "closes_at": "20:00",
+      "price_range": null,
+      "instagram_url": null,
+      "google_maps_url": "https://www.google.com/maps/place/Amelia+Bakery+Batu+Karas/@-7.734402,108.49817,17z",
+      "latitude": -7.734402,
+      "longitude": 108.49817,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 3,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": "5.json"
+      },
+      "_evidence": {
+        "opens_at_source": "Tripadvisor Amelia Bakery Batu Karas hours table",
+        "closes_at_source": "Tripadvisor Amelia Bakery Batu Karas hours table; Thursday listed as 18:00",
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "instagram_url"],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "[5.json] Thursday closes earlier at 18:00 per Tripadvisor; verify weekly schedule before publishing"
+      ]
+    },
+    {
+      "name": "HangFive Cafe",
+      "slug": "hangfive-cafe",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "09:00",
+      "closes_at": "21:00",
+      "price_range": "mid",
+      "instagram_url": "https://www.instagram.com/hangfivebatukaras",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["1.json"],
+        "cross_source_count": 1,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": "https://www.instagram.com/reel/DLhgBqxS96b/",
+        "closes_at_source": "https://www.instagram.com/reel/DLhgBqxS96b/",
+        "price_range_source": "https://www.instagram.com/reel/DLhgBqxS96b/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets"],
+      "red_flags": [
+        "single-source (1.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps"
+      ]
+    },
+    {
+      "name": "Kalaras Hotel, Villa, Cottage & Cafe",
+      "slug": "kalaras-hotel-villa-cottage-cafe",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "10:00",
+      "closes_at": "22:00",
+      "price_range": null,
+      "instagram_url": "https://www.instagram.com/kalaras_resort/",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": "Instagram profile snippet for @kalaras_resort",
+        "closes_at_source": "Instagram profile snippet for @kalaras_resort",
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "coordinates"],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing"
+      ]
+    },
+    {
+      "name": "KOKYO by SJAHTRA",
+      "slug": "kokyo-by-sjahtra",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "mid",
+      "instagram_url": "https://www.instagram.com/kokyo.co/",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": "Lemon8 / social-search result for Kokyo Coffee Batukaras",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing"
+      ]
+    },
+    {
+      "name": "Maison de Karas",
+      "slug": "maison-de-karas",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": "07:00",
+      "closes_at": "22:00",
+      "price_range": null,
+      "instagram_url": "https://www.instagram.com/maisondekaras/",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 2,
+        "closes_at": 2,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": "Instagram profile snippet for @maisondekaras",
+        "closes_at_source": "Instagram profile snippet: Mon-Fri 7 AM-10 PM, Sat-Sun 7 AM-11 PM",
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": ["wifi_speed_mbps", "power_outlets", "price_range", "coordinates"],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing"
+      ]
+    },
+    {
+      "name": "Sico Coffee",
+      "slug": "sico-coffee",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": null,
+      "instagram_url": "https://www.instagram.com/sico.coffee/",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "price_range",
+        "coordinates"
+      ],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing",
+        "[5.json] single-source, low confidence — verify before publishing"
+      ]
+    },
+    {
+      "name": "Slow Burn Coffee & Eatery",
+      "slug": "slow-burn-coffee-eatery",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": null,
+      "instagram_url": "https://www.instagram.com/slowburn.bk/",
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["5.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": null,
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "price_range",
+        "coordinates"
+      ],
+      "red_flags": [
+        "single-source (5.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps",
+        "[5.json] no valid place listing",
+        "[5.json] single-source, low confidence — verify before publishing"
+      ]
+    },
+    {
+      "name": "The Maison Mini Bar Cafe",
+      "slug": "the-maison-mini-bar-cafe",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "mid",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["3.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": "https://www.instagram.com/reel/DXBAbgGkpdi/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": [
+        "single-source (3.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps"
+      ]
+    },
+    {
+      "name": "Treehouse Cafe",
+      "slug": "treehouse-cafe",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "mid",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["1.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": "https://tourbandung.co.id/treehouse-cafe-batu-karas/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "opens_at",
+        "closes_at",
+        "wifi_speed_mbps",
+        "power_outlets",
+        "instagram_url confirmation"
+      ],
+      "red_flags": [
+        "single-source (1.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps"
+      ]
+    },
+    {
+      "name": "Tropik Cafe Batu Karas",
+      "slug": "tropik-cafe-batu-karas",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["3.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": "https://www.instagram.com/reel/DM9extoThkd/",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "wifi_speed_mbps",
+        "power_outlets",
+        "opens_at",
+        "closes_at",
+        "coordinates"
+      ],
+      "red_flags": [
+        "single-source (3.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps"
+      ]
+    },
+    {
+      "name": "Wagoon Coffee",
+      "slug": "wagoon-coffee",
+      "location_area": "batu_karas",
+      "wifi_speed_mbps": null,
+      "power_outlets": null,
+      "opens_at": null,
+      "closes_at": null,
+      "price_range": "budget",
+      "instagram_url": null,
+      "google_maps_url": null,
+      "latitude": null,
+      "longitude": null,
+      "_confidence": {
+        "appears_in": ["1.json"],
+        "cross_source_count": 1,
+        "opens_at": 0,
+        "closes_at": 0,
+        "price_range": 0,
+        "coords_from": null
+      },
+      "_evidence": {
+        "opens_at_source": null,
+        "closes_at_source": null,
+        "price_range_source": "https://www.tripadvisor.co.id/RestaurantsNear-g1137814-d10182879-Mangrove_Forest_Batukaras-Pangandaran_West_Java_Java.html",
+        "instagram_url_source": null
+      },
+      "needs_field_survey": [
+        "opens_at",
+        "closes_at",
+        "wifi_speed_mbps",
+        "power_outlets",
+        "instagram_url confirmation"
+      ],
+      "red_flags": [
+        "single-source (1.json) — verify before publishing",
+        "no valid /maps/place/ URL — listing not confirmed",
+        "coordinates missing or implausible — verify on Google Maps"
+      ]
+    }
+  ]
+}
