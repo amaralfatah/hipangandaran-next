@@ -1,22 +1,31 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
 
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* TODO(content): replace gradient with real Batukaras sunset photo (Next/Image, priority).
-          Awaiting URL from user or photographer credit. */}
+      <Image
+        src="/images/hero-1.png"
+        alt="Sunset over a Pangandaran tidepool reef, with a silhouetted tree on the right and distant island on the horizon"
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover object-center"
+      />
+      {/* Scrim — guarantees text contrast (>=4.5:1) against any photo */}
       <div
         aria-hidden="true"
-        className="from-ocean via-ocean/85 to-coral/70 absolute inset-0 -z-10 bg-gradient-to-br"
+        className="from-charcoal/75 via-charcoal/40 absolute inset-0 -z-10 bg-gradient-to-r to-transparent"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_55%)]"
+        className="from-charcoal/50 absolute inset-0 -z-10 bg-gradient-to-t to-transparent"
       />
 
-      <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-32">
-        <p className="text-cream/80 font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
-          Pangandaran · Batukaras · Green Canyon
+      <div className="relative mx-auto max-w-6xl px-4 py-20 md:px-6 md:py-32">
+        <p className="text-cream/90 font-[family-name:var(--font-mono)] text-sm tracking-widest uppercase">
+          Pangandaran · Batukaras · Karapyak
         </p>
         <h1 className="text-cream mt-4 max-w-3xl text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
           Your honest guide to Pangandaran &amp; Batukaras
@@ -26,18 +35,16 @@ export function Hero() {
           speeds, real beaches worth your time.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/guides"
-            className="bg-coral text-cream hover:bg-coral/90 focus-visible:ring-coral focus-visible:ring-offset-ocean inline-flex h-12 items-center justify-center rounded-full px-7 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          <Button asChild variant="coral" size="lg" className="focus-visible:ring-offset-ocean">
+            <Link href="/guides">Start planning</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            className="border-cream/50 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-ocean border bg-transparent font-normal"
           >
-            Start planning
-          </Link>
-          <Link
-            href="/places/accommodation"
-            className="border-cream/50 text-cream hover:border-cream hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-ocean inline-flex h-12 items-center justify-center rounded-full border bg-transparent px-7 text-base font-normal transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            Find accommodation
-          </Link>
+            <Link href="/places/accommodation">Find accommodation</Link>
+          </Button>
         </div>
       </div>
     </section>

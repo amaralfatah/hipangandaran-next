@@ -132,8 +132,7 @@ export function Header() {
           >
             <ul className="mx-auto flex max-w-6xl flex-col px-4 py-2">
               {navLinks.map((link) => {
-                const active =
-                  pathname === link.href || pathname.startsWith(link.href + '/')
+                const active = pathname === link.href || pathname.startsWith(link.href + '/')
                 return (
                   <li key={link.href}>
                     <Link

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { getAllArticles } from '@/lib/mdx'
+import { formatArticleDate } from '@/lib/utils'
 
 const categoryLabels: Record<string, string> = {
   transport: 'Transport',
@@ -12,15 +13,6 @@ const categoryLabels: Record<string, string> = {
   planning: 'Planning',
 }
 
-function formatDate(dateStr: string) {
-  return new Intl.DateTimeFormat('en', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    timeZone: 'UTC',
-  }).format(new Date(dateStr))
-}
-
 export async function LatestGuides() {
   const articles = await getAllArticles()
   const latest = articles.slice(0, 3)
@@ -29,7 +21,7 @@ export async function LatestGuides() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-20">
-      <div className="flex items-end justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div>
           <h2 className="text-charcoal font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight md:text-3xl">
             Latest guides
@@ -52,7 +44,7 @@ export async function LatestGuides() {
           return (
             <li key={slug}>
               <article className="h-full">
-                <Card className="group relative flex h-full flex-col focus-within:ring-2 focus-within:ring-ocean focus-within:ring-offset-2">
+                <Card className="group focus-within:ring-ring relative flex h-full flex-col transition-shadow focus-within:ring-2 focus-within:ring-offset-2 hover:shadow-md">
                   <CardHeader>
                     <Badge variant="surf">
                       {categoryLabels[frontmatter.category] ?? frontmatter.category}
@@ -60,7 +52,7 @@ export async function LatestGuides() {
                     <CardTitle>
                       <Link
                         href={`/guides/${slug}`}
-                        className="after:absolute after:inset-0 after:rounded-2xl group-hover:text-ocean focus-visible:outline-none"
+                        className="group-hover:text-ocean after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none"
                       >
                         {frontmatter.title}
                       </Link>
@@ -70,7 +62,7 @@ export async function LatestGuides() {
                   <CardFooter>
                     <span>By {frontmatter.author}</span>
                     <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
-                      {frontmatter.readingTime} min · {formatDate(frontmatter.publishedAt)}
+                      {frontmatter.readingTime} min · {formatArticleDate(frontmatter.publishedAt)}
                     </span>
                   </CardFooter>
                 </Card>

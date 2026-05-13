@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
+import { useState, type FormEvent, type ComponentType, type SVGProps } from 'react'
+import { Backpack, Building2, Sofa, CheckCircle2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
   CALCULATOR_DATA,
@@ -31,10 +32,12 @@ const DAY_OPTIONS = [
   { label: '14 days', value: 14 },
 ] as const
 
-const BUDGET_OPTIONS: { label: string; emoji: string; value: BudgetStyle }[] = [
-  { label: 'Budget', emoji: '🎒', value: 'budget' },
-  { label: 'Mid-range', emoji: '🏨', value: 'mid' },
-  { label: 'Comfort', emoji: '🛋️', value: 'comfort' },
+type IconType = ComponentType<SVGProps<SVGSVGElement>>
+
+const BUDGET_OPTIONS: { label: string; icon: IconType; value: BudgetStyle }[] = [
+  { label: 'Budget', icon: Backpack, value: 'budget' },
+  { label: 'Mid-range', icon: Building2, value: 'mid' },
+  { label: 'Comfort', icon: Sofa, value: 'comfort' },
 ]
 
 const ORIGIN_OPTIONS: { label: string; value: OriginCity }[] = [
@@ -71,13 +74,13 @@ function RadioGroup<T extends string | number>({
 }: {
   legend: string
   name: string
-  options: readonly { label: string; value: T; emoji?: string }[] | readonly T[]
+  options: readonly { label: string; value: T; icon?: IconType }[] | readonly T[]
   value: T
   onChange: (v: T) => void
 }) {
   const normalised = options.map((o) =>
     typeof o === 'object' && o !== null && 'value' in o
-      ? (o as { label: string; value: T; emoji?: string })
+      ? (o as { label: string; value: T; icon?: IconType })
       : { label: String(o), value: o as T },
   )
 
@@ -90,12 +93,13 @@ function RadioGroup<T extends string | number>({
         {normalised.map((opt) => {
           const id = `${name}-${String(opt.value)}`
           const active = opt.value === value
+          const Icon = 'icon' in opt ? opt.icon : undefined
           return (
             <label
               key={String(opt.value)}
               htmlFor={id}
               className={cn(
-                'flex cursor-pointer items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+                'flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors active:scale-[0.98]',
                 active
                   ? 'border-ocean bg-ocean text-cream'
                   : 'border-charcoal/20 text-charcoal/80 hover:border-ocean hover:text-ocean',
@@ -110,7 +114,7 @@ function RadioGroup<T extends string | number>({
                 onChange={() => onChange(opt.value)}
                 className="sr-only"
               />
-              {'emoji' in opt && opt.emoji ? <span aria-hidden="true">{opt.emoji}</span> : null}
+              {Icon ? <Icon aria-hidden="true" className="h-4 w-4" strokeWidth={1.75} /> : null}
               {opt.label}
             </label>
           )
@@ -222,8 +226,9 @@ function SaveEstimate({
 
   if (status === 'success') {
     return (
-      <p role="status" className="text-forest mt-4 text-sm font-medium">
-        ✓ {message}
+      <p role="status" className="text-forest mt-4 flex items-start gap-2 text-sm font-medium">
+        <CheckCircle2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={2} />
+        <span>{message}</span>
       </p>
     )
   }
@@ -317,7 +322,24 @@ export function CostCalculator() {
   const breakdown = calculate(effectiveInputs)
 
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12">
+    <div className="grid grid-cols-1 gap-8 pb-20 lg:grid-cols-5 lg:gap-12 lg:pb-0">
+      {/* ── Mobile sticky total ── */}
+      <a
+        href="#cost-breakdown"
+        className="bg-cream border-charcoal/10 text-charcoal fixed inset-x-0 bottom-0 z-30 flex items-center justify-between gap-3 border-t px-4 py-3 shadow-lg lg:hidden"
+        aria-label="Jump to estimated total"
+      >
+        <span className="text-charcoal/70 text-xs tracking-wide uppercase">Estimated total</span>
+        <span className="flex items-center gap-2">
+          <span className="text-charcoal font-[family-name:var(--font-mono)] text-base font-bold tabular-nums">
+            {formatRp(breakdown.total)}
+          </span>
+          <span aria-hidden="true" className="text-charcoal/55 text-xs">
+            ↓
+          </span>
+        </span>
+      </a>
+
       {/* ── Form ── */}
       <div className="space-y-7 lg:col-span-3">
         <RadioGroup
@@ -341,7 +363,7 @@ export function CostCalculator() {
                   key={opt.value}
                   htmlFor={id}
                   className={cn(
-                    'flex cursor-pointer items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+                    'flex min-h-11 cursor-pointer items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors active:scale-[0.98]',
                     active
                       ? 'border-ocean bg-ocean text-cream'
                       : 'border-charcoal/20 text-charcoal/80 hover:border-ocean hover:text-ocean',
@@ -368,7 +390,7 @@ export function CostCalculator() {
             <label
               htmlFor="days-custom"
               className={cn(
-                'flex cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+                'flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
                 useCustomDays
                   ? 'border-ocean bg-ocean text-cream'
                   : 'border-charcoal/20 text-charcoal/80 hover:border-ocean hover:text-ocean',
@@ -390,8 +412,10 @@ export function CostCalculator() {
                   setCustomDays(e.target.value)
                 }}
                 className={cn(
-                  'w-12 bg-transparent text-center outline-none',
-                  useCustomDays ? 'placeholder:text-cream/60' : 'placeholder:text-charcoal/40',
+                  'w-14 bg-transparent text-center font-medium tabular-nums outline-none',
+                  useCustomDays
+                    ? 'text-cream placeholder:text-cream/60'
+                    : 'text-charcoal placeholder:text-charcoal/40',
                 )}
               />
               days
@@ -411,10 +435,7 @@ export function CostCalculator() {
           <legend className="text-charcoal/75 mb-2 text-xs font-semibold tracking-widest uppercase">
             Traveling from
           </legend>
-          <Select
-            value={inputs.origin}
-            onValueChange={(v) => patch('origin', v as OriginCity)}
-          >
+          <Select value={inputs.origin} onValueChange={(v) => patch('origin', v as OriginCity)}>
             <SelectTrigger id="origin-select" aria-label="Origin city">
               <SelectValue />
             </SelectTrigger>
@@ -439,7 +460,7 @@ export function CostCalculator() {
                 <label
                   key={opt.value}
                   className={cn(
-                    'flex cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors',
+                    'flex min-h-11 cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-colors active:scale-[0.98]',
                     checked
                       ? 'border-ocean bg-ocean text-cream'
                       : 'border-charcoal/20 text-charcoal/80 hover:border-ocean hover:text-ocean',
@@ -468,8 +489,8 @@ export function CostCalculator() {
       </div>
 
       {/* ── Result ── */}
-      <div className="lg:col-span-2">
-        <div className="bg-sand/60 sticky top-6 rounded-3xl p-6">
+      <div id="cost-breakdown" className="scroll-mt-24 lg:col-span-2">
+        <div className="bg-sand/60 sticky top-24 rounded-3xl p-6">
           <p className="text-charcoal/65 font-[family-name:var(--font-mono)] text-xs tracking-widest uppercase">
             Estimated Cost Breakdown
           </p>
@@ -512,7 +533,7 @@ export function CostCalculator() {
             <SaveEstimate breakdown={breakdown} inputs={effectiveInputs} />
           </div>
 
-          <p className="text-charcoal/40 mt-5 font-[family-name:var(--font-mono)] text-xs">
+          <p className="text-charcoal/55 mt-5 font-[family-name:var(--font-mono)] text-xs">
             Prices last updated: {CALCULATOR_DATA.lastUpdated}
           </p>
         </div>

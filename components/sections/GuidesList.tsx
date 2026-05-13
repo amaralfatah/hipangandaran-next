@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/shadcn/button'
 import { Input } from '@/components/ui/shadcn/input'
-import { cn } from '@/lib/utils'
+import { cn, formatArticleDate } from '@/lib/utils'
 import type { GuideFrontmatter } from '@/lib/mdx'
 
 export interface GuideListItem {
@@ -40,9 +40,7 @@ export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
         frontmatter.title.toLowerCase().includes(q) ||
         frontmatter.description.toLowerCase().includes(q) ||
         frontmatter.author.toLowerCase().includes(q) ||
-        (categoryLabels[frontmatter.category] ?? frontmatter.category)
-          .toLowerCase()
-          .includes(q)
+        (categoryLabels[frontmatter.category] ?? frontmatter.category).toLowerCase().includes(q)
       )
     })
   }, [articles, query, category, categoryLabels])
@@ -69,12 +67,11 @@ export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
           />
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          <FilterPill
-            active={category === ALL}
-            onClick={() => setCategory(ALL)}
-            label="All"
-          />
+        <div
+          aria-label="Filter guides by category"
+          className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:mx-0 md:flex-wrap md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden"
+        >
+          <FilterPill active={category === ALL} onClick={() => setCategory(ALL)} label="All" />
           {categories.map((c) => (
             <FilterPill
               key={c}
@@ -86,9 +83,8 @@ export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
         </div>
       </div>
 
-      <p className="text-charcoal/55 mt-4 text-xs font-[family-name:var(--font-mono)] tracking-wide">
-        {filtered.length} of {articles.length}{' '}
-        {articles.length === 1 ? 'guide' : 'guides'}
+      <p className="text-charcoal/55 mt-4 font-[family-name:var(--font-mono)] text-xs tracking-wide">
+        {filtered.length} of {articles.length} {articles.length === 1 ? 'guide' : 'guides'}
       </p>
 
       {filtered.length === 0 ? (
@@ -123,7 +119,7 @@ export function GuidesList({ articles, categoryLabels }: GuidesListProps) {
                     <CardFooter>
                       <span>By {frontmatter.author}</span>
                       <span className="text-charcoal/60 font-[family-name:var(--font-mono)] text-xs">
-                        {frontmatter.readingTime} min · {frontmatter.publishedAt}
+                        {frontmatter.readingTime} min · {formatArticleDate(frontmatter.publishedAt)}
                       </span>
                     </CardFooter>
                   </article>
@@ -153,7 +149,11 @@ function FilterPill({
       size="sm"
       onClick={onClick}
       aria-pressed={active}
-      className={cn('h-8 px-3.5 text-xs', !active && 'bg-cream')}
+      className={cn(
+        // Expanded hitbox: 44pt vertical tap area on touch, compact visual on desktop
+        '-my-1.5 h-11 shrink-0 px-3.5 text-xs md:my-0 md:h-9',
+        !active && 'bg-cream',
+      )}
     >
       {label}
     </Button>

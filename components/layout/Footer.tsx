@@ -34,14 +34,28 @@ export function Footer({ lastVerified }: { lastVerified?: string }) {
               An honest English travel guide to Pangandaran, Batukaras, and Green Canyon. Written by
               Amar — a local, not a tour operator.
             </p>
-            <p className="text-charcoal/60 mt-4 text-xs">
+            <p className="text-charcoal/75 mt-4 text-sm">
               <a
                 href="https://www.instagram.com/hipangandaran"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-ocean underline-offset-4 hover:underline"
+                className="hover:text-ocean inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
               >
-                Instagram @hipangandaran
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" />
+                </svg>
+                @hipangandaran
               </a>
             </p>
           </div>

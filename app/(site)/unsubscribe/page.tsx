@@ -57,7 +57,11 @@ export default async function UnsubscribePage({
           You&rsquo;re unsubscribed
         </h1>
         <p className="text-charcoal/75 mt-4 max-w-xl">
-          {email ? <>We&rsquo;ve removed <strong>{email}</strong> from the list. </> : null}
+          {email ? (
+            <>
+              We&rsquo;ve removed <strong>{email}</strong> from the list.{' '}
+            </>
+          ) : null}
           You won&rsquo;t get any more emails from us. If you change your mind, you can resubscribe
           from the homepage.
         </p>
@@ -117,13 +121,11 @@ export default async function UnsubscribePage({
             required
             defaultValue={email}
             placeholder="you@example.com"
-            className="border-charcoal/15 bg-cream text-charcoal h-11 w-full rounded-full border px-5 text-sm placeholder:text-charcoal/40 focus-visible:border-ocean focus-visible:ring-2 focus-visible:ring-ocean/40 focus-visible:outline-none"
+            className="border-charcoal/15 bg-cream text-charcoal placeholder:text-charcoal/40 focus-visible:border-ocean focus-visible:ring-ocean/40 h-11 w-full rounded-full border px-5 text-sm focus-visible:ring-2 focus-visible:outline-none"
             aria-invalid={invalid}
           />
           {invalid && (
-            <p className="text-error mt-2 text-sm">
-              That email looks off — mind double-checking?
-            </p>
+            <p className="text-error mt-2 text-sm">That email looks off — mind double-checking?</p>
           )}
         </div>
 

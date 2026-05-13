@@ -21,6 +21,10 @@ export function WifiBar({ mbps, className }: { mbps: number | null; className?: 
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
+      <span className="sr-only">
+        WiFi: {bucketLabel[bucket]}
+        {mbps != null ? `, ${mbps} Mbps` : ''}
+      </span>
       <div className="flex items-end gap-0.5" aria-hidden="true">
         {[0, 1, 2].map((i) => (
           <span
@@ -33,7 +37,10 @@ export function WifiBar({ mbps, className }: { mbps: number | null; className?: 
           />
         ))}
       </div>
-      <span className="text-charcoal/75 font-[family-name:var(--font-mono)] text-xs">
+      <span
+        aria-hidden="true"
+        className="text-charcoal/75 font-[family-name:var(--font-mono)] text-xs"
+      >
         {mbps == null ? bucketLabel.none : `${mbps} Mbps`}
       </span>
     </div>

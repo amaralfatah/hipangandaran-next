@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { ExternalLink } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { AffiliateButton } from '@/components/ui/AffiliateButton'
 import { Breadcrumb } from '@/components/Breadcrumb'
@@ -139,14 +140,7 @@ async function AccommodationDetail({
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-xs">
             {item.google_maps_url && (
-              <a
-                href={item.google_maps_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ocean font-medium underline-offset-4 hover:underline"
-              >
-                Google Maps →
-              </a>
+              <ExternalActionLink href={item.google_maps_url} label="Google Maps" />
             )}
             {item.verified_at && (
               <span className="text-charcoal/60 font-[family-name:var(--font-mono)]">
@@ -185,9 +179,9 @@ async function AccommodationDetail({
                 Check Agoda
               </AffiliateButton>
             </div>
-            <p className="text-charcoal/55 mt-3 text-[11px]">
+            <p className="text-charcoal/65 mt-3 text-xs leading-relaxed">
               Affiliate links — we may earn a small commission at no extra cost to you.{' '}
-              <Link href="/affiliate-disclosure" className="underline-offset-4 hover:underline">
+              <Link href="/affiliate-disclosure" className="underline underline-offset-4">
                 Learn more
               </Link>
               .
@@ -219,7 +213,7 @@ function CafeDetail({ item }: { item: NonNullable<Awaited<ReturnType<typeof getC
       />
 
       <header className="mt-6">
-        <Badge>Cafe</Badge>
+        <Badge variant="cafe">Cafe</Badge>
         <h1 className="text-charcoal mt-3 font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight md:text-5xl">
           {item.name}
         </h1>
@@ -240,25 +234,9 @@ function CafeDetail({ item }: { item: NonNullable<Awaited<ReturnType<typeof getC
 
       <div className="mt-6 flex flex-wrap items-center gap-4 text-xs">
         {item.google_maps_url && (
-          <a
-            href={item.google_maps_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ocean font-medium underline-offset-4 hover:underline"
-          >
-            Google Maps →
-          </a>
+          <ExternalActionLink href={item.google_maps_url} label="Google Maps" />
         )}
-        {item.instagram_url && (
-          <a
-            href={item.instagram_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ocean font-medium underline-offset-4 hover:underline"
-          >
-            Instagram →
-          </a>
-        )}
+        {item.instagram_url && <ExternalActionLink href={item.instagram_url} label="Instagram" />}
         {item.last_verified_at && (
           <span className="text-charcoal/60 font-[family-name:var(--font-mono)]">
             Verified {formatVerificationDate(item.last_verified_at)}
@@ -279,5 +257,20 @@ function Fact({ label, value, sub }: { label: string; value: string; sub?: strin
         <dd className="text-charcoal/55 font-[family-name:var(--font-mono)] text-xs">{sub}</dd>
       )}
     </div>
+  )
+}
+
+function ExternalActionLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${label} (opens in new tab)`}
+      className="text-ocean inline-flex items-center gap-1 font-medium underline-offset-4 hover:underline"
+    >
+      {label}
+      <ExternalLink aria-hidden="true" className="h-3.5 w-3.5" strokeWidth={1.75} />
+    </a>
   )
 }

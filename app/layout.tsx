@@ -57,10 +57,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body
-        className="bg-cream text-charcoal flex min-h-full flex-col"
-        suppressHydrationWarning
-      >
+      <body className="bg-cream text-charcoal flex min-h-full flex-col" suppressHydrationWarning>
         <OrganizationJsonLd />
         <Analytics />
         {children}

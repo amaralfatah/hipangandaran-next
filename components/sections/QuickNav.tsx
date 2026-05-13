@@ -46,12 +46,12 @@ export function QuickNav() {
         Four shortcuts to the questions most people ask before they land.
       </p>
 
-      <ul className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+      <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4 md:gap-4">
         {cards.map((card) => (
           <li key={card.title}>
             <Link
               href={card.href}
-              className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean flex h-full flex-col rounded-2xl border p-4 transition-colors focus-visible:ring-2 focus-visible:outline-none md:p-6"
+              className="group border-charcoal/10 bg-cream hover:border-ocean/40 hover:bg-sand/30 focus-visible:ring-ocean flex h-full flex-col rounded-2xl border p-4 transition-all focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99] md:p-6"
               aria-label={`${card.title}${card.comingSoon ? ' (coming soon)' : ''}`}
             >
               <span
@@ -70,9 +70,7 @@ export function QuickNav() {
                   </span>
                 )}
               </span>
-              <span className="text-charcoal/70 mt-1 hidden text-sm md:block">
-                {card.description}
-              </span>
+              <span className="text-charcoal/70 mt-1 text-sm">{card.description}</span>
             </Link>
           </li>
         ))}
