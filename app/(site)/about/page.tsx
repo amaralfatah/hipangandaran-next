@@ -29,31 +29,39 @@ export default function AboutPage() {
         </h1>
       </header>
 
-      <figure className="border-charcoal/10 mt-8 overflow-hidden rounded-3xl border">
-        {/* TODO(content): replace with real photo of Amar in Pangandaran. */}
+      <figure className="border-charcoal/10 relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-3xl border">
         <Image
-          src="/images/guides/placeholder.jpg"
-          alt="Placeholder portrait — replace with author photo"
-          width={1200}
-          height={630}
-          className="h-auto w-full"
+          src="/images/me.png"
+          alt="Amar — author of Hi Pangandaran"
+          fill
+          sizes="(min-width: 768px) 768px, 100vw"
+          className="object-cover"
+          priority
         />
       </figure>
 
       <div className="prose-base text-charcoal/85 mt-10 space-y-5 leading-relaxed">
         <p>
-          [PLACEHOLDER: 1 paragraf — siapa Anda, sudah berapa lama di Pangandaran, kenapa di sini.
-          Tulis dengan voice &ldquo;honest local friend&rdquo; — second person, casual, satu detail
-          spesifik yang tidak generik.]
+          I&rsquo;m Amar. I was born in Pangandaran town and grew up an hour east in Karapyak,
+          where my family still runs <strong>Toko Cacha</strong> — a small warung in Emplak you can
+          find on Google Maps. It&rsquo;s the shop that reopens earliest after Idul Fitri, while
+          most of the village is still shut, because that&rsquo;s when travelers heading to
+          Karapyak and Bagolo beaches stop in for water, smokes, and the things you forgot to pack.
         </p>
         <p>
-          [PLACEHOLDER: 1 paragraf — apa yang Anda kerjakan sehari-hari. Surf? Remote work? Ngajar?
-          Ini bagian &ldquo;trust foundation&rdquo; untuk audience asing — semakin spesifik, semakin
-          dipercaya.]
+          My day job is software — I work hybrid for a company in Jakarta, so most of the
+          workweek I&rsquo;m in the city and Karapyak is where I head back every chance I get. The
+          local rhythm is what resets me: kopi in the morning at the same warung, kopi again in
+          the late afternoon at usually the same place, and a run into Pangandaran town when I
+          want proper kuliner — grilled fish on the beach, the kind of food the Karapyak side
+          doesn&rsquo;t really do.
         </p>
         <p>
-          [PLACEHOLDER: 1 paragraf — kenapa Anda bikin site ini. Frustrasi sama travel content yang
-          generik? Capek lihat turis ditipu di Green Canyon? Tulis honest.]
+          I started Hi Pangandaran because there isn&rsquo;t a single English-language site
+          dedicated to this coast. The Indonesian ones that exist are mostly directories and
+          booking pages — useful if you already know what you want, less so if you&rsquo;re trying
+          to figure out whether to come at all. My goal here is narrower than &ldquo;inspire
+          travelers&rdquo;: I want you to have a realistic picture before you book the flight.
         </p>
 
         <h2 className="text-charcoal mt-10 font-[family-name:var(--font-display)] text-2xl font-semibold md:text-3xl">
@@ -62,8 +70,8 @@ export default function AboutPage() {
         <p>
           Most English-language content about Pangandaran is written by people who spent two days
           here, recycled the same five facts, and called it a guide. This site is the opposite:
-          slow, specific, occasionally negative when it needs to be, and updated by someone who
-          actually lives within walking distance of the lineup.
+          slow, specific, occasionally negative when it needs to be, and written by someone who
+          actually grew up on this coast — not someone who flew in for a weekend.
         </p>
 
         <h2

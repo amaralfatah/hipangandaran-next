@@ -1,0 +1,240 @@
+{
+"area": "karapyak",
+"searched_at": "2026-05-13",
+"total_found": 4,
+"cafes": [
+{
+"name": "Nuya Cafe Food and Drink",
+"slug": "nuya-cafe-food-and-drink",
+"location_area": "karapyak",
+"wifi_speed_mbps": null,
+"power_outlets": null,
+"opens_at": "10:00",
+"closes_at": "20:00",
+"price_range": "mid",
+"instagram_url": "https://www.instagram.com/nuyacafe_/",
+"google_maps_url": null,
+"latitude": null,
+"longitude": null,
+"evidence": {
+"opens_at": {
+"source": "Instagram profile snippet @nuyacafe_: operational hours 10:00-20:00",
+"confidence": "medium"
+},
+"closes_at": {
+"source": "Instagram profile snippet @nuyacafe_: operational hours 10:00-20:00",
+"confidence": "medium"
+},
+"price_range": {
+"reasoning": "Cybo lists the venue as '$$'; exact per-cup coffee price was not found, so mid is inferred with moderate confidence.",
+"source": "Cybo Nuya Cafe Food and Drink listing"
+},
+"power_outlets": {
+"quote": "",
+"source": "not found"
+},
+"wifi_speed_mbps": {
+"source": "not found"
+},
+"coordinates": {
+"source": "not found"
+}
+},
+"needs_field_survey": [
+"wifi_speed_mbps",
+"power_outlets",
+"coordinates"
+],
+"red_flags": [
+"no valid place listing",
+"hours conflict: Cybo lists Mon-Fri 09:00-20:00, Saturday 05:30-21:00, Sunday 07:00-21:00; Instagram bio lists 10:00-20:00"
+]
+},
+{
+"name": "Karapyak Glamping & Lodges",
+"slug": "karapyak-glamping-lodges",
+"location_area": "karapyak",
+"wifi_speed_mbps": null,
+"power_outlets": null,
+"opens_at": "08:00",
+"closes_at": "20:00",
+"price_range": null,
+"instagram_url": "https://www.instagram.com/karapyak.glamping/",
+"google_maps_url": "https://www.google.com/maps/place/Karapyak+Glamping+%26+Lodges/@-7.695614,108.762755,17z",
+"latitude": -7.695614,
+"longitude": 108.762755,
+"evidence": {
+"opens_at": {
+"source": "Instagram profile snippet @karapyak.glamping: 'Open daily resto 08.00 s.d 20.00'",
+"confidence": "medium"
+},
+"closes_at": {
+"source": "Instagram profile snippet @karapyak.glamping: 'Open daily resto 08.00 s.d 20.00'",
+"confidence": "medium"
+},
+"price_range": {
+"reasoning": "Restaurant, coffee corner, and coffee shop evidence found, but exact per-cup coffee price was not found.",
+"source": "Tripadvisor, Tiket.com, Traveloka, and Instagram snippets"
+},
+"power_outlets": {
+"quote": "",
+"source": "not found"
+},
+"wifi_speed_mbps": {
+"source": "Traveloka and Google Hotel snippets mention Wi-Fi, but no measured speed is published"
+},
+"coordinates": {
+"source": "Sisparnas 'Buka di Google Maps' link query: -7.695614,108.762755"
+}
+},
+"needs_field_survey": [
+"wifi_speed_mbps",
+"power_outlets",
+"price_range"
+],
+"red_flags": [
+"hours conflict: some Instagram snippets show 08:00-18:00 while others show resto open daily 08:00-20:00",
+"lodging, resto, and coffee-corner hybrid; verify public cafe access before publishing for digital nomads"
+]
+},
+{
+"name": "REY HOUSE CAFE",
+"slug": "rey-house-cafe",
+"location_area": "karapyak",
+"wifi_speed_mbps": null,
+"power_outlets": null,
+"opens_at": "08:00",
+"closes_at": "17:00",
+"price_range": null,
+"instagram_url": "https://www.instagram.com/resto_pantai_karapyak_official/",
+"google_maps_url": "https://www.google.com/maps/place/REY+HOUSE+CAFE/@-7.695084,108.764082,17z",
+"latitude": -7.695084,
+"longitude": 108.764082,
+"evidence": {
+"opens_at": {
+"source": "Teras Kaca Karapyak Valley Instagram snippet lists Karapyak Valley Resto 'N Bar hours 08:00-17:00 weekdays and 07:30-17:00 weekends",
+"confidence": "low"
+},
+"closes_at": {
+"source": "Teras Kaca Karapyak Valley Instagram snippet lists Karapyak Valley Resto 'N Bar hours until 17:00",
+"confidence": "low"
+},
+"price_range": {
+"reasoning": "Official tourism directory confirms REY HOUSE CAFE as a food and beverage amenity, but menu and per-cup coffee price were not found.",
+"source": "Sisparnas REY HOUSE CAFE listing and Instagram @resto_pantai_karapyak_official"
+},
+"power_outlets": {
+"quote": "",
+"source": "not found"
+},
+"wifi_speed_mbps": {
+"source": "not found"
+},
+"coordinates": {
+"source": "Sisparnas 'Buka di Google Maps' link query: -7.695084,108.764082"
+}
+},
+"needs_field_survey": [
+"wifi_speed_mbps",
+"power_outlets",
+"price_range"
+],
+"red_flags": [
+"hours source appears to refer to Karapyak Valley/Teras Kaca; verify actual REY HOUSE CAFE operating hours before publishing",
+"also appears online as Rey House Cafe & Bar / Karapyak Valley Resto N Bar; possible alias or rebranding"
+]
+},
+{
+"name": "Kopi +62",
+"slug": "kopi-62",
+"location_area": "karapyak",
+"wifi_speed_mbps": null,
+"power_outlets": null,
+"opens_at": null,
+"closes_at": null,
+"price_range": null,
+"instagram_url": "https://www.instagram.com/kopiplus62_id/",
+"google_maps_url": null,
+"latitude": null,
+"longitude": null,
+"evidence": {
+"opens_at": {
+"source": "not found for Karapyak location",
+"confidence": "low"
+},
+"closes_at": {
+"source": "not found for Karapyak location",
+"confidence": "low"
+},
+"price_range": {
+"reasoning": "Coffee brand evidence found at Pantai Karapyak via a tagged Instagram post, but menu price for the Karapyak location was not found.",
+"source": "Instagram search result mentioning 'KOPI+62 Pantai Karapyak, Bagolo, Kab. Pangandaran'"
+},
+"power_outlets": {
+"quote": "",
+"source": "not found"
+},
+"wifi_speed_mbps": {
+"source": "not found"
+},
+"coordinates": {
+"source": "not found"
+}
+},
+"needs_field_survey": [
+"wifi_speed_mbps",
+"power_outlets",
+"opens_at",
+"closes_at",
+"price_range",
+"coordinates"
+],
+"red_flags": [
+"no valid place listing",
+"single-source, low confidence — verify before publishing",
+"Instagram account bio lists Tasikmalaya branches; Karapyak evidence may be temporary, pop-up, or tagged content only"
+]
+}
+],
+"summary": {
+"candidates_skipped": [
+{
+"name": "Warung Makan Teh Heni Pantai Karapyak",
+"reason": "Recent evidence confirms a comfortable food warung near Pantai Karapyak, but it appears to be a restaurant/warung makan rather than a cafe or coffee-shop concept."
+},
+{
+"name": "Karapyak Valley Resto N Bar",
+"reason": "Likely alias, complex name, or older branding connected to REY HOUSE CAFE / Rey House Cafe & Bar; treated as duplicate to avoid double counting."
+},
+{
+"name": "Teras Kaca Karapyak Valley",
+"reason": "Tourist photo attraction associated with Karapyak Valley rather than an independent cafe listing."
+},
+{
+"name": "Banchet Coffee & Pecel Cinta Kalipucang",
+"reason": "Coffee-shop listing found in Kalipucang, but not clearly within the Karapyak beach target area."
+},
+{
+"name": "Warung Bilal",
+"reason": "Cafe/breakfast listing found in Kalipucang postal area, but not clearly within the Karapyak beach target area."
+},
+{
+"name": "Kedai Berry",
+"reason": "Cafe/coffee listing found in Kalipucang postal area, but not clearly within the Karapyak beach target area."
+},
+{
+"name": "Es Kelapa Muda Hanjuang",
+"reason": "Beverage listing found in Kalipucang postal area, but not a cafe/coffee-shop concept and not clearly within Karapyak beach."
+},
+{
+"name": "Resto n Resort bar holiday pnd",
+"reason": "Weak Instagram-only mention; no stable official listing, hours, coordinates, or cafe concept evidence found."
+},
+{
+"name": "Unnamed warung kopi at Karapyak Beach",
+"reason": "Social posts show a warung kopi sign, but no official business name or stable listing was found."
+}
+],
+"coverage_notes": "Search coverage included Google-style local/place queries for cafe, coffee shop, kopi, warung kopi, and brunch around Karapyak; Instagram hashtag/location-style results for kopikarapyak, cafekarapyak, and karapyakcafe; Google web queries for best cafe, digital nomad cafe, and Wi-Fi cafe Karapyak Pangandaran; and Tripadvisor Cafe/Coffee & Tea style discovery. Karapyak has a very small cafe ecosystem compared with Pangandaran Beach and Batu Karas. The strongest publishable candidates are Nuya Cafe Food and Drink, Karapyak Glamping & Lodges, and REY HOUSE CAFE. Most missing fields are Wi-Fi speed, power outlets, exact coffee price, and verified Google Maps place URLs."
+}
+}
